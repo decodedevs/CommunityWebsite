@@ -30,7 +30,7 @@ function App() {
       <Team />
       <Newsletter />
       <Footer />
-      <Chat />
+      {/* <Chat /> */}
     </div>
   );
 }

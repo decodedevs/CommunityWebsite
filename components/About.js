@@ -7,7 +7,9 @@ export default function About() {
     <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
       <div className="sm:max-w-lg">
         <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text  sm:text-6xl ">About Us</h1>
-        <p className="mt-4 text-xl text-gray-500">Pursuing my bachelor’s degree in Computer Science and Engineering. I am a highly competent software professional with a proven track record in designing websites, networking, and open source contributor. I have strong technical skills as well as excellent interpersonal skills, enabling me to interact with new people. I am eager to be challenged in order to grow and further improve my software skills. My main goal is to demystify technology for everyone.</p>
+        <p className="mt-4 text-xl text-gray-500">We are a group of young enthusiasts on a mission to connect with the maximum number of students like us and provide them with the opportunity to explore a sea of possibilities to thrive in their careers. The idea for creating this community stemmed from real-life experiences. We observed how many students lack guidance and proper mentorship for their futures, which often leads them to choose inappropriate career paths. Our mission is to support all types of students and offer them a comprehensive overview of the wide array of choices available. By assisting our fellow peers, we aim to contribute to a world where people can learn, assist, and inspire one another.
+At Decode Devs, think of us as problem-solving companions armed with creativity and intellect. Envision a puzzle: we delight in collaborating to discover solutions that simplify your challenges. Our toolkit brims with ideas, much like a vibrant box of crayons, and we're enthusiastic about utilizing them to help you decipher any obstacles you encounter. However, we're not solely focused on brainstorming – we also roll up our sleeves and put in the effort. With us by your side, intricate problems transform into pathways with clear markers, guiding you towards success. Let's collaborate to transform problems into opportunities and demonstrate that challenges cannot impede our progress!
+</p>
       </div>
       <div>
         <div className="mt-10">
@@ -21,11 +23,7 @@ export default function About() {
                     <img src="https://media.istockphoto.com/id/497614524/photo/start-up-developer-team-did-it-again.jpg?s=612x612&w=0&k=20&c=ft8ZYO2ZnI_MkJmbwGyetgKJkKpmMXgAKWuRJkulqnI="/>
                   </div>
                  
-                 
-                  
-              
-                 
-                 
+
                 </div>
               </div>
             </div>
