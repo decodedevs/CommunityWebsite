@@ -13,11 +13,12 @@ export default function Hero() {
 
 
         <div className="absolute left-0 top-[10%] md:top-[40%] flex w-2/4 flex-col items-start justify-center gap-4 p-10 backdrop-blur-xl">
-          <h1 className="text-6xl text-white">Empower</h1>
+          <h1 className="text-6xl text-white">LEARN.</h1>
           <div className="text-6xl text-white overflow-hidden">
-            <span className="font-sans text-6xl bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text overflow-hidden"> Educate</span>
+            <span className="font-sans text-6xl bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text overflow-hidden"> DEVELOP.</span>
+            <span className="font-sans text-6xl bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text overflow-hidden"> GROW.</span>
           </div>
-
+          <h2 className="text-2xl text-white">Cultivate Knowledge, Develop Expertise, and Grow Profoundly</h2>
           <div className=''>
             {/* <Type /> */}
           </div>

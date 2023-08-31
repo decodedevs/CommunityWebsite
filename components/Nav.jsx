@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import img from '@/Assets/logo.png';
+import logo from '../assets/logo.png';
+import Image from 'next/image';
 
 export default function Nav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,11 +54,12 @@ export default function Nav() {
             </button>
           </div>
           <div>
-            <img
-              className="h-20"
-              src={img}
+            <Image
+              className="h-20 w-auto sm:h-28"
+              src={logo}
               alt="Your Company"
             />
+      
           </div>
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -97,7 +99,7 @@ export default function Nav() {
                   Newsroom
                 </a>
                 <a
-                  href="https://kirtikamal.hashnode.dev/"
+                  href="https://decodedevs.hashnode.dev/"
                   target="_blank"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
                 >
@@ -139,7 +141,7 @@ export default function Nav() {
                   onClick={toggleProfileMenu}
                 >
                   <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src={img} alt="" />
+                  <img className="h-8 w-8 rounded-full" src={Image} alt="" />
                 </button>
               </div>
               <div
