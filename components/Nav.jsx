@@ -5,6 +5,7 @@ import img from '@/Assets/logo.png';
 import Link from 'next/link';
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import Image from 'next/image';
 
 export default function Nav() {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -114,8 +115,8 @@ export default function Nav() {
             </button>
           </div>
           <div>
-            <img
-              className="h-20"
+            <Image
+              className="h-20 w-auto sm:h-28"
               src={img}
               alt="Your Company"
             />
