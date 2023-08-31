@@ -48,28 +48,28 @@ const people = [
       github: 'https://github.com/KirtiKamal'
     },
   },
-  {
-    name: 'Kalyan Mohapatra',
-    imageUrl: 'https://avatars.githubusercontent.com/u/142584768?v=4',
-    // role: 'Co-Founder / CEO',
-    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
-    social: {
-      twitter: 'https://twitter.com/kirtikamal',
-      linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/KirtiKamal'
-    },
-  },
-  {
-    name: 'Soumya Ranjan',
-    imageUrl: 'https://avatars.githubusercontent.com/u/123158751?v=4',
-    // role: 'Co-Founder / CEO',
-    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
-    social: {
-      twitter: 'https://twitter.com/kirtikamal',
-      linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/KirtiKamal'
-    },
-  },
+  // {
+  //   name: 'Kalyan Mohapatra',
+  //   imageUrl: 'https://avatars.githubusercontent.com/u/142584768?v=4',
+  //   // role: 'Co-Founder / CEO',
+  //   about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+  //   social: {
+  //     twitter: 'https://twitter.com/kirtikamal',
+  //     linkedin: 'https://linkedin.com/in/kirtikamal',
+  //     github: 'https://github.com/KirtiKamal'
+  //   },
+  // },
+  // {
+  //   name: 'Soumya Ranjan',
+  //   imageUrl: 'https://avatars.githubusercontent.com/u/123158751?v=4',
+  //   // role: 'Co-Founder / CEO',
+  //   about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+  //   social: {
+  //     twitter: 'https://twitter.com/kirtikamal',
+  //     linkedin: 'https://linkedin.com/in/kirtikamal',
+  //     github: 'https://github.com/KirtiKamal'
+  //   },
+  // },
   {
     name: 'Debadatta Pradhan',
     imageUrl: 'https://avatars.githubusercontent.com/u/142510886?v=4',

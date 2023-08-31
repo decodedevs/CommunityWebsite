@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 const articles = [
   {
     id: 1,
-    title: "Article 1",
     content: "Begin your Git journey: A comprehensive guide for newcomers, demystifying version control and collaboration with simplicity.",
     date: "A Beginners Guide To Git",
     link: "https://decodedevs.hashnode.dev/a-beginners-guide-to-git",
@@ -15,7 +14,6 @@ const articles = [
   },
   {
     id: 2,
-    title: "Article 2",
     content: "Embark on a journey into the realm of Computer Networks: An in-depth beginner's handbook, unraveling the magic that interconnects us all",
     date: "Computer Network Part-2",  
     link: "https://decodedevs.hashnode.dev/computer-network-part-2",
@@ -23,7 +21,6 @@ const articles = [
   },
   {
     id: 3,
-    title: "Article 3",
     content: "Unlock the mysteries of Computer Networks: A comprehensive guide for beginners, unraveling the magic that connects us all",
     date: "Computer Network Part-1",
     link: "https://decodedevs.hashnode.dev/computer-network-part-1",
@@ -31,7 +28,6 @@ const articles = [
   },
   {
     id: 4,
-    title: "Article 4",
     content: "Venture into the realm of YAML: A beginner's guide unveiling the simplicity behind structuring data with elegance",
     date: "A Beginner's Guide To YAML",
     link: "https://decodedevs.hashnode.dev/a-beginners-guide-to-yaml", 
@@ -39,7 +35,6 @@ const articles = [
   },
   {
     id: 5, 
-    title: "Article 5",
     content: "Embark on your coding journey: A beginner's roadmap to diving into programming, laying the foundation for your tech dreams.",
     date: "How To Start Coding As a Beginner",
     link: "https://decodedevs.hashnode.dev/how-to-start-coding-as-a-beginner",
@@ -85,17 +80,17 @@ const Newsroom = () => {
           
           <div 
             key={article.id}
-            className="bg-white p-4 rounded-lg shadow-md"
+            className=" bg-gradient-to-r from-slate-300 to-slate-500  p-4 rounded-lg shadow-md"
             style={{width: "100%", maxWidth: 400}}
           >
      
             <h3 className="font-bold mb-2">{article.title}</h3>
             <img src={article.image} alt={article.title} />  
-            <p className="text-gray-500 text-sm mb-4 font-bold mt">
+            <p className="text-black text-sm mb-4 font-bold mt">
               {article.date}
             </p>
 
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-800 text-sm">
               {article.content}
             </p>
 
