@@ -16,11 +16,11 @@ export default function Mentorship() {
         
         <div>
             <h3 className="text-2xl font-bold tracking-tight text-white">Structured learning paths</h3>
-            <p className="mt-2 text-lg text-gray-300">We provide curated roadmaps and learning paths tailored to your goals and skill level. Whether you're a beginner, intermediate or advanced developer, we have a plan for you.</p>
+            <p className="mt-2 text-lg text-gray-300">We provide curated roadmaps and learning paths tailored to your goals and skill level. Whether you're a beginner, intermediate or advanced developer, we have got your back.</p>
           </div>  
           <div>
             <h3 className="text-2xl font-bold tracking-tight text-white">Educational materials</h3>
-            <p className="mt-2 text-lg text-gray-300">We give you access to a library of tutorials, articles, code challenges, and other learning resources to supplement your mentorship.</p>
+            <p className="mt-2 text-lg text-gray-300">We give you access to a library of tutorials, articles, code challenges, and other learning resources to supplement your learning. </p>
           </div>
 
           <div>
