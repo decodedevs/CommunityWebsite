@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-8">
-        <p>&copy; {new Date().getFullYear()} Cupid Code. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Decode Devs. All rights reserved.</p>
       </div>
     </footer>
   );
