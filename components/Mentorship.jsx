@@ -8,7 +8,7 @@ export default function Mentorship() {
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-2">
       
         <div className="relative h-64 lg:h-full">
-        <img className="absolute inset-0 object-cover w-full h-full" src="https://pbs.twimg.com/media/Fwf497naUAEa9yX?format=jpg&name=large" alt="Mentorship" />
+        <img className="absolute inset-0 object-cover w-full h-full" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVudG9yfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Mentorship" />
           
         </div>
         
