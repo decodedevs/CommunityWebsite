@@ -12,6 +12,7 @@ import Join from "@/components/Join";
 import Newsroom from "@/components/Newsroom";
 import Newsletter from "@/components/Newsletter";
 import Chat from "@/components/ChatbotFile/Chat";
+import NavBar from "@/components/NavBar";
 
 
 function App() {

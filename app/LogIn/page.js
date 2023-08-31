@@ -1,6 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { initializeApp } from 'firebase/app';
+import {getAuth, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect} from 'firebase/auth'
+
 const Login = () => {
+
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -18,7 +27,57 @@ const Login = () => {
     e.preventDefault();
     // Perform login form submission or validation here
     console.log('Login form submitted:', formData);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   };
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBifEBhJzXlTSLrv6cT6Xo3TOgMh3XR8Vw",
+    authDomain: "cupid-code.firebaseapp.com",
+    projectId: "cupid-code",
+    storageBucket: "cupid-code.appspot.com",
+    messagingSenderId: "172465490651",
+    appId: "1:172465490651:web:f3eb86012f46de8184dafe",
+    measurementId: "G-L4V7J5L10D"
+  };
+
+
+const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  useEffect(()=>{
+    onAuthStateChanged(auth,(user)=>{
+      if (user){
+        router.push("/");
+      }
+      else{
+        console.log(user);
+      }
+    })
+  },[])
+
+  function handleGoogle(){
+    console.log("hello")
+    const provider = new GoogleAuthProvider();
+    signInWithRedirect(auth, provider)
+    .then((result)=>{
+      console.log(result.user);
+      router.push('/');
+    })
+    .catch((error)=>{
+      console.log(error.code, error.message);
+    })
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center">
@@ -63,12 +122,15 @@ const Login = () => {
               Log In
             </button>
           </div>
+          <div onClick={handleGoogle}>
+            Login With Google
+          </div>
         </form>
         <p className="mt-4 text-sm text-gray-100">
           Don't have an account?{' '}
-          <a href="#" className="text-indigo-600 hover:underline">
+          <Link href="/SignUp" className="text-indigo-600 hover:underline">
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
