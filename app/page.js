@@ -12,14 +12,35 @@ import Join from "@/components/Join";
 import Newsroom from "@/components/Newsroom";
 import Newsletter from "@/components/Newsletter";
 import Chat from "@/components/ChatbotFile/Chat";
+import { useEffect, useState } from "react";
+import Spinner from "@/components/Spinner";
 
 
 function App() {
+
+  const [loadSpinner, setLoadSpinner] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+
+  useEffect(()=>{
+    setLoadSpinner(false);
+  },[]);
+
+  function handleAnyClick(e){
+    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
+      setIsProfileMenuOpen(!isProfileMenuOpen);
+    }
+    else{
+      console.log("false");
+      setIsProfileMenuOpen(false);
+    }
+  }
+
   return (
-    <div className="bg-gray-800 pb-20">
-      <Nav />
-      {/* <Signup />
-      <Login /> */}
+    <div className="bg-gray-800 pb-20" onClick={(e)=>{handleAnyClick(e)}}>
+      <dialog open={loadSpinner?'open':false} className='md:bg-transparent bg-black'>
+        <Spinner />
+      </dialog>
+      <Nav setLoadSpinner={setLoadSpinner} isProfileMenuOpen={isProfileMenuOpen}/>
       <Hero />
       <Welcome />
       <About />

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 
-export default function Nav() {
+export default function Nav(props) {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -37,23 +37,6 @@ export default function Nav() {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  // if (user){
-    
-  // }
-  // else{
-  //   onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       setIsUserLoggedIn(true);
-  //       setUser(user);
-  //       console.log(user.displayName);
-  //     }
-  //     else {
-  //       setIsUserLoggedIn(false);
-  //       setUser(null);
-  //     }
-  //   })
-  // }
-
   useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -68,6 +51,10 @@ export default function Nav() {
     })
   },[])
 
+  useEffect(()=>{
+    setIsProfileMenuOpen(props.isProfileMenuOpen);
+  },[props.isProfileMenuOpen])
+
   function handleSignOut(){
     signOut(auth).then(()=>{
       console.log("sign out");
@@ -77,9 +64,22 @@ export default function Nav() {
     })
   }
 
+  function handleSpinner(){
+    props.setLoadSpinner(true);
+  }
+
+  function handleAnyClick(e){
+    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
+      setIsProfileMenuOpen(true);
+    }
+    else{
+      setIsProfileMenuOpen(false);
+    }
+  }
+
 
   return (
-    <nav className="bg-gray-800 sticky top-0 z-50">
+    <nav className="bg-gray-800 sticky top-0 z-50" onClick={(e)=>{handleAnyClick(e)}}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -200,7 +200,7 @@ export default function Nav() {
                   onClick={toggleProfileMenu}
                 >
                   <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src={isUserLoggedIn?user.photoURL:""} alt="" />
+                  <img className="h-8 w-8 rounded-full" src={isUserLoggedIn?user.photoURL:""} alt="" id='profile'/>
                 </button>
               </div>
               <div
@@ -210,6 +210,7 @@ export default function Nav() {
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
                 tabIndex="-1"
+                id='profileMenu'
               >
                 {
                   isUserLoggedIn ?
@@ -240,7 +241,7 @@ export default function Nav() {
                         href="/LogIn"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         role="menuitem"
-
+                        onClick={handleSpinner}
                       >
                         Login
                       </Link>
@@ -248,6 +249,7 @@ export default function Nav() {
                         href="/SignUp"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         role="menuitem"
+                        onClick={handleSpinner}
                       >
                         Signup
                       </Link>
