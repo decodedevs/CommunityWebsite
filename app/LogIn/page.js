@@ -5,10 +5,16 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { initializeApp } from 'firebase/app';
 import {getAuth, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect} from 'firebase/auth'
+import Spinner from '@/components/Spinner';
 
 const Login = () => {
 
   const router = useRouter();
+  const [loadSpinner, setLoadSpinner] = useState(false);
+
+  useEffect(()=>{
+    setLoadSpinner(false);
+  },[]);
 
   const [formData, setFormData] = useState({
     email: '',
@@ -24,6 +30,7 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
+    setLoadSpinner(true);
     e.preventDefault();
     // Perform login form submission or validation here
     console.log('Login form submitted:', formData);
@@ -32,6 +39,7 @@ const Login = () => {
         // Signed in 
         const user = userCredential.user;
         console.log(user);
+        setLoadSpinner(false);
         // ...
       })
       .catch((error) => {
@@ -67,11 +75,13 @@ const app = initializeApp(firebaseConfig);
   },[])
 
   function handleGoogle(){
+    setLoadSpinner(true);
     console.log("hello")
     const provider = new GoogleAuthProvider();
     signInWithRedirect(auth, provider)
     .then((result)=>{
       console.log(result.user);
+      setLoadSpinner(false);
       router.push('/');
     })
     .catch((error)=>{
@@ -81,6 +91,9 @@ const app = initializeApp(firebaseConfig);
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center">
+      <dialog open={loadSpinner?'open':false} className='md:bg-transparent bg-black'>
+        <Spinner />
+      </dialog>
       <div className="max-w-md w-full mx-auto p-8 bg-gradient-to-l from-gray-700 via-gray-900 to-black rounded-lg shadow-md">
         <h2 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text pb-2">Log In</h2>
         <form onSubmit={handleSubmit}>
