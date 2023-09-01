@@ -136,7 +136,7 @@ const app = initializeApp(firebaseConfig);
             </button>
           </div>
           <div onClick={handleGoogle}>
-            Login With Google
+          <button className="w-full mt-3 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300">Log In With Google</button>
           </div>
         </form>
         <p className="mt-4 text-sm text-gray-100">
