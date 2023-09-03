@@ -59,17 +59,6 @@ const Join = () => {
 
         <motion.div className="flex flex-wrap justify-center gap-6" animate={animateIcons}>
         
-          <CardWithInfo 
-            icon={
-              <FaTelegram 
-                className="text-blue-500 text-6xl"
-                onMouseEnter={e => e.target.classList.add('hover:text-blue-700')}
-                onMouseLeave={e => e.target.classList.remove('hover:text-blue-700')}
-              />
-            }
-            link="#"
-          />
-        
           <CardWithInfo
             icon={
               <FaDiscord
@@ -78,7 +67,7 @@ const Join = () => {
                 onMouseLeave={e => e.target.classList.remove('hover:text-blue-700')}
               />
             }
-            link="#" 
+            link="https://discord.gg/XDm67SsE" 
           />
         
           <CardWithInfo 
@@ -89,17 +78,27 @@ const Join = () => {
                 onMouseLeave={e => e.target.classList.remove('hover:text-blue-700')} 
               />
             }
+            link="https://chat.whatsapp.com/HPLkxZvlPPqEkwoN6LMGmH"
+          />
+           <CardWithInfo 
+            icon={
+              <FaTelegram 
+                className="text-blue-500 text-6xl"
+                onMouseEnter={e => e.target.classList.add('hover:text-blue-700')}
+                onMouseLeave={e => e.target.classList.remove('hover:text-blue-700')}
+              />
+            }
             link="#"
           />
 
         </motion.div>
 
 
-        <div className="text-center mt-5">
+        {/* <div className="text-center mt-5">
           <motion.button className="bg-white text-blue-800 px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition" animate={animateH2AndBtn}>
             Join Now
           </motion.button> 
-        </div>
+        </div> */}
 
       </div>
 
