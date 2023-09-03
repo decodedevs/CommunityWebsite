@@ -70,9 +70,11 @@ const Newsletter = () => {
   return (
     <section className="bg-gradient-to-r from-black to-indigo-800 py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center">
+        <div className="text-center">
+        <span className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
           Subscribe to Our Newsletter
-        </h2>
+        </span>
+        </div>
 
         <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
           <div className="flex flex-wrap -mx-3">
@@ -86,6 +88,7 @@ const Newsletter = () => {
                 onChange={(e) => setFirstName(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your First Name"
               />
             </div>
 
@@ -99,6 +102,7 @@ const Newsletter = () => {
                 onChange={(e) => setLastName(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your Last Name"
               />
             </div>
 
@@ -113,6 +117,7 @@ const Newsletter = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your Email"
               />
             </div>
 

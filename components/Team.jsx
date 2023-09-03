@@ -88,9 +88,11 @@ const people = [
 
 export default function Team() {
   return (
-    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32">
+    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black sm:py-5">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl">Meet Our Team</h2>
+        <div className='text-center'>
+        <span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text sm:text-6xl">Meet Our Team</span>
+        </div>
         <p className="text-lg text-gray-600">
         "Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration."
         </p>

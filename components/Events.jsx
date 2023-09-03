@@ -7,7 +7,7 @@ export default function Events() {
       
       <div className="basis-1/2 p-4 md:p-8">
       
-        <h2 className="text-4xl font-bold lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Events</h2>
+        <span className="text-4xl font-bold lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Events</span>
 
         <div className="mt-6 space-y-6">
         

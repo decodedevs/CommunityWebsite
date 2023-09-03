@@ -4,13 +4,13 @@ import { FaTelegram, FaDiscord, FaWhatsapp } from "react-icons/fa";
 const Join = () => {
 
   return (
-    <section id="join" className="bg-gradient-to-r from-black to-indigo-800 py-16">
+    <section id="join" className="bg-gradient-to-r from-black to-indigo-800 py-5">
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 text-center">
 
-        <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-300 to-blue-700 text-transparent bg-clip-text">Join Us Today</h2>
+        <span className="text-4xl mx-auto font-bold text-center mb-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">Join Us Today</span>
 
-        <p className="text-gray-300 text-center mb-12">
+        <p className="text-gray-300 text-center mb-5">
           Be part of our amazing community and stay connected with fellow developers.
         </p>
 
@@ -51,7 +51,7 @@ const Join = () => {
 
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-5">
           <button className="bg-white text-blue-800 px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition">
             Join Now
           </button> 
