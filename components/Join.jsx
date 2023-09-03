@@ -8,7 +8,7 @@ const Join = () => {
       
       <div className="container mx-auto px-4">
 
-        <h2 className="text-4xl font-bold text-center mb-8">Join Us Today</h2>
+        <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-300 to-blue-700 text-transparent bg-clip-text">Join Us Today</h2>
 
         <p className="text-gray-300 text-center mb-12">
           Be part of our amazing community and stay connected with fellow developers.
@@ -17,24 +17,42 @@ const Join = () => {
         <div className="flex flex-wrap justify-center gap-6">
         
           <CardWithInfo 
-            icon={<FaTelegram className="text-blue-500 text-6xl" />} 
+            icon={
+              <FaTelegram 
+                className="text-blue-500 text-6xl"
+                onMouseEnter={e => e.target.classList.add('hover:text-blue-700')}
+                onMouseLeave={e => e.target.classList.remove('hover:text-blue-700')}
+              />
+            }
             link="#"
           />
         
           <CardWithInfo
-            icon={<FaDiscord className="text-blue-500 text-6xl" />}
+            icon={
+              <FaDiscord
+                className="text-blue-500 text-6xl" 
+                onMouseEnter={e => e.target.classList.add('hover:text-blue-700')}
+                onMouseLeave={e => e.target.classList.remove('hover:text-blue-700')}
+              />
+            }
             link="#" 
           />
         
           <CardWithInfo 
-            icon={<FaWhatsapp className="text-blue-500 text-6xl" />}
+            icon={
+              <FaWhatsapp
+                className="text-blue-500 text-6xl"
+                onMouseEnter={e => e.target.classList.add('hover:text-blue')}
+                onMouseLeave={e => e.target.classList.remove('hover:text-blue-700')} 
+              />
+            }
             link="#"
           />
 
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-white text-blue-800 px-6 py-2 rounded-lg font-semibold">
+          <button className="bg-white text-blue-800 px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition">
             Join Now
           </button> 
         </div>

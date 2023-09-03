@@ -14,6 +14,7 @@ import Newsletter from "@/components/Newsletter";
 import Chat from "@/components/ChatbotFile/Chat";
 import { useEffect, useState } from "react";
 import Spinner from "@/components/Spinner";
+import Events from "@/components/Events";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <Welcome />
       <About />
       <Mentorship />
+      <Events />
       <Newsroom />
       <Join />
       <Team />
