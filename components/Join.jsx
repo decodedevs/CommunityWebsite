@@ -3,7 +3,7 @@ import { FaTelegram, FaDiscord, FaWhatsapp } from "react-icons/fa";
 
 const Join = () => {
   return (
-    <section id="join" className="bg-gradient-to-r from-black to-indigo-800  py-16">
+    <section id="join" className="bg-gradient-to-r from-black to-indigo-800 w-full py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-300 to-blue-700 text-transparent bg-clip-text">Join Us Today</h2>
         <p className="text-gray-300 mb-8">

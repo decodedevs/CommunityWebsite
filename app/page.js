@@ -16,7 +16,7 @@ import Chat from "@/components/ChatbotFile/Chat";
 
 function App() {
   return (
-    <div className="bg-gray-800 pb-20">
+    <div className="bg-gray-800 pb-20 w-full">
       <Nav />
       {/* <Signup />
       <Login /> */}

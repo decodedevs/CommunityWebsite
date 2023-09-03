@@ -3,7 +3,7 @@ import React from 'react';
 export default function Mentorship() {
 
   return (
-    <div id="mentorship" className="bg-gradient-to-r from-black to-indigo-800 py-24 sm:py-32">
+    <div id="mentorship" className="bg-gradient-to-r from-black to-indigo-800 py-24 sm:py-32 w-full">
               <h2 className="text-3xl pl-6 font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl">Mentorship</h2>
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-2">
       

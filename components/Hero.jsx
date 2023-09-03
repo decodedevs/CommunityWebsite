@@ -4,11 +4,11 @@ import img from '@/Assets/hero.jpg'
 
 export default function Hero() {
   return (
-    <div id='home' className="relative  shadow-cyan-400">
+    <div id='home' className="relative shadow-cyan-400">
 
 
 
-      <div className="sticky top-0 flex h-screen items-center justify-center bg-black ">
+      <div className="sticky top-0 flex h-screen items-center justify-center bg-black">
         {/* <img src={img} className="h-full w-full object-cover" /> */}
 
 

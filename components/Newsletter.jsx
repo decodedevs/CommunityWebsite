@@ -63,7 +63,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-black to-indigo-800 py-8">
+    <section className="bg-gradient-to-r from-black to-indigo-800 py-8 w-full">
       <div className="container mx-auto">
         <h2 className="text-4xl text-center font-bold mb-4 ml-6 bg-gradient-to-r from-cyan-300 to-blue-700 text-transparent bg-clip-text">Subscribe to Our Newsletter</h2>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-gradient-to-l from-gray-700 via-gray-900 to-black p-6 shadow-md rounded-md">
