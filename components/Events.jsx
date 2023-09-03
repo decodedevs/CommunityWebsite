@@ -21,7 +21,14 @@ export default function Events() {
           <div>
             <h3 className="text-lg font-medium leading-6 text-blue-400">Workshops</h3>
             <p className="mt-2 text-base text-gray-100">
-              Hands-on workshops to gain practical experience and apply concepts covered in webinars. 
+              Hands-on workshops to gain practical experience and apply concepts covered in webinars.
+            </p>
+          </div>
+          
+          <div>  
+            <h3 className="text-lg font-medium leading-6 text-blue-400">Blogging Challenges</h3>
+            <p className="mt-2 text-base text-gray-100">
+              Sharpen your blogging skills through fun writing challenges.
             </p>
           </div>
         

@@ -77,6 +77,12 @@ export default function Mentorship() {
               Join our community of learners and mentors to ask questions, meet peers, and network with industry experts.
             </p>
           </div>
+
+          
+          <button className="px-4 py-2 font-bold text-white bg-blue-600 rounded hover:bg-blue-700">
+            <a href="https://github.com/decodedevs/roadmap" target='_blank'>Learn More</a>  
+          </button>
+        </div>
         </motion.div>
       </div>
 
