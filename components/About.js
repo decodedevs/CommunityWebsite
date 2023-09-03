@@ -67,7 +67,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <motion.div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center" animate={imgDiv}>
+        <motion.div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center" animate={imgDiv}>
           <img 
             className="rounded-md h-64 w-64 lg:h-96 lg:w-96 object-cover"
             src="https://i.pinimg.com/564x/a3/c3/88/a3c388bc39b40d4018587fa7cdece07b.jpg" 
