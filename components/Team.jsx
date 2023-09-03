@@ -101,7 +101,7 @@ const people = [
 export default function Team() {
 
   const ref = useRef(null) ;
-  const isInView = useInView(ref, { amount: 0.4, once:true }) ;
+  const isInView = useInView(ref, { amount: 0.2, once:true }) ;
   const animateH2 = useAnimation() ;
   const animateP = useAnimation() ;
   const animateCard = useAnimation() ;
@@ -135,7 +135,7 @@ export default function Team() {
         x: '-100vw'
       })
       animateCard.start({
-        opacity: 1
+        opacity: 0
       })
     }
   }, [isInView]) ;
