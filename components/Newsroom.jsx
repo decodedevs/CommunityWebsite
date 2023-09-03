@@ -75,6 +75,7 @@ const Newsroom = () => {
       
       <h1 className="text-3xl p-4 font-bold tracking-tight bg-gradient-to-r from-cyan-300 to-blue-700 text-transparent bg-clip-text sm:text-4xl">Newsroom</h1>
 
+    <div className="w-[90%] mx-auto">
       <Slider {...settings}>
         {articles.map(article => (
           
@@ -105,6 +106,7 @@ const Newsroom = () => {
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 };
