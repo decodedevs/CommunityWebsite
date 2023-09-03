@@ -34,18 +34,19 @@ const Login = () => {
     e.preventDefault();
     // Perform login form submission or validation here
     console.log('Login form submitted:', formData);
-    signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, formData.email, formData.password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         console.log(user);
-        setLoadSpinner(false);
+        router.push('/');
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        alert(errorMessage);
+        router.push('/');
       });
   };
 
@@ -81,19 +82,21 @@ const app = initializeApp(firebaseConfig);
     signInWithRedirect(auth, provider)
     .then((result)=>{
       console.log(result.user);
-      setLoadSpinner(false);
       router.push('/');
     })
     .catch((error)=>{
       console.log(error.code, error.message);
+      alert(error.message);
+      router.push('/');
     })
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center">
-      <dialog open={loadSpinner?'open':false} className='md:bg-transparent bg-black'>
+    <>
+      <dialog open={loadSpinner?'open':false} className='bg-transparent z-20'>
         <Spinner />
       </dialog>
+    <div className={`min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center ${loadSpinner? 'blur':""}`}>
       <div className="max-w-md w-full mx-auto p-8 bg-gradient-to-l from-gray-700 via-gray-900 to-black rounded-lg shadow-md">
         <h2 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text pb-2">Log In</h2>
         <form onSubmit={handleSubmit}>
@@ -128,6 +131,14 @@ const app = initializeApp(firebaseConfig);
             </label>
           </div>
           <div>
+            <div>
+              <Link href={{
+                pathname: '/ResetPswd',
+                query: auth
+              }}>
+              forgot password
+              </Link>
+            </div>
             <button
               type="submit"
               className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300"
@@ -147,6 +158,7 @@ const app = initializeApp(firebaseConfig);
         </p>
       </div>
     </div>
+    </>
   );
 };
 

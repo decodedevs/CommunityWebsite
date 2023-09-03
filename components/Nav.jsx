@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import Image from 'next/image';
+import defaultUserImg from '@/Assets/download.png';
 
 export default function Nav(props) {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -114,12 +115,11 @@ export default function Nav(props) {
               </svg>
             </button>
           </div>
-          <div className="flex items-center justify-center flex-shrink-0">
+          <div>
             <Image
-              className="h-20 w-auto sm:h-28 sm:w-auto sm:align-middle"
+              className="h-20 w-auto sm:h-28"
               src={img}
               alt="Your Company"
-         
             />
           </div>
 
@@ -130,14 +130,13 @@ export default function Nav(props) {
                   onClick={() => {
                     routing('home');
                   }}
-                  className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                  aria-current="page"
+                  className="hover:bg-gray-700 hover:cursor-pointer text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Home
                 </a>
                 <a
                   onClick={() => {
-                    routing('about');
+                    routing('mentorship');
                   }}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
                 >
@@ -145,7 +144,7 @@ export default function Nav(props) {
                 </a>
                 <a
                   onClick={() => {
-                    routing('skill');
+                    routing('events');
                   }}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
                 >
@@ -153,7 +152,7 @@ export default function Nav(props) {
                 </a>
                 <a
                   onClick={() => {
-                    routing('contact');
+                    routing('newsroom');
                   }}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
                 >
@@ -174,21 +173,6 @@ export default function Nav(props) {
               type="button"
               className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-0"
             >
-              <span className="sr-only">View notifications</span>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-                />
-              </svg>
             </button>
 
             <div className="relative ml-3">
@@ -201,8 +185,11 @@ export default function Nav(props) {
                   aria-haspopup="true"
                   onClick={toggleProfileMenu}
                 >
-                  <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src={isUserLoggedIn?user.photoURL:""} alt="" id='profile'/>
+                  {isUserLoggedIn?
+                    <img className="h-8 w-8 rounded-full" src={user.photoURL} alt={defaultUserImg} id='profile'/>
+                    :
+                  <Image className="h-8 w-8 rounded-full" src={isUserLoggedIn?user.photoURL:defaultUserImg} alt={defaultUserImg} id='profile'/>
+                  }
                 </button>
               </div>
               <div
@@ -233,12 +220,6 @@ export default function Nav(props) {
                     </>
                     :
                     <>
-                      <div
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        role="menuitem"
-                      >
-                        Your Profile
-                      </div>
                       <Link
                         href="/LogIn"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -277,7 +258,7 @@ export default function Nav(props) {
             </a>
             <a
               onClick={() => {
-                routing('about');
+                routing('mentorship');
               }}
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
@@ -285,7 +266,7 @@ export default function Nav(props) {
             </a>
             <a
               onClick={() => {
-                routing('skill');
+                routing('events');
               }}
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
@@ -293,7 +274,7 @@ export default function Nav(props) {
             </a>
             <a
               onClick={() => {
-                routing('contact');
+                routing('newsroom');
               }}
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
