@@ -3,7 +3,7 @@ import img from '@/Assets/hero.jpg';
 
 export default function Hero() {
   return (
-    <div className="relative bg-black">
+    <div id='home' className="relative bg-black">
       {/* <img 
         src={img}
         className="absolute inset-0 object-cover w-full h-full" 
