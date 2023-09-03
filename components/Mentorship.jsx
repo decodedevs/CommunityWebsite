@@ -5,7 +5,7 @@ export default function Mentorship() {
   return (
     <div className="flex flex-col md:flex-row bg-gradient-to-l from-gray-700 via-gray-900 to-black">
       <div className="basis-1/2 p-4 md:p-8">
-        <h2 className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">Mentorship</h2>
+        <span className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">Mentorship</span>
 
         <div className="mt-6 space-y-6">
           <div>

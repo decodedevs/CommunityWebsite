@@ -71,9 +71,11 @@ const Newsroom = () => {
   };
 
   return (
-    <div id="newsroom" className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32">
-      <div className="max-w-screen-lg mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-3xl p-4 font-bold text-center tracking-tight bg-gradient-to-r from-cyan-300 to-blue-700 text-transparent bg-clip-text sm:text-4xl">Newsroom</h1>
+    <div id="newsroom" className="bg-gradient-to-l from-gray-700 via-gray-900 to-black sm:py-10">
+      <div className="">
+        <div className="text-center">
+      <span className="text-3xl p-4 font-bold text-center tracking-tight bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text sm:text-4xl">Newsroom</span>
+        </div>
 
     <div className="w-[90%] mx-auto">
       <Slider {...settings}>
