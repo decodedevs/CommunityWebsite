@@ -3,7 +3,7 @@ import React from 'react';
 export default function Events() {
 
   return (
-    <div className="flex flex-col md:flex-row bg-gradient-to-r from-black to-indigo-800 ">
+    <div id='events' className="flex flex-col md:flex-row bg-gradient-to-r from-black to-indigo-800 ">
       
       <div className="basis-1/2 p-4 md:p-8">
       

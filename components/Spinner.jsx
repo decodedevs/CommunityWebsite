@@ -4,6 +4,7 @@ import './Spinner.css'
 export default function Spinner() {
     return (
         <>
+        <div className='mt-56'>
             <div class="loader">
                 <svg viewBox="0 0 80 80">
                     <circle r="32" cy="40" cx="40" id="test"></circle>
@@ -21,6 +22,7 @@ export default function Spinner() {
                     <rect height="64" width="64" y="8" x="8"></rect>
                 </svg>
             </div>
+        </div>
         </>
     )
 }
