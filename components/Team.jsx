@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useAnimation, useInView, motion } from 'framer-motion';
 
 const people = [
   {
@@ -87,14 +88,55 @@ const people = [
 ];
 
 export default function Team() {
+
+  const ref = useRef(null) ;
+  const isInView = useInView(ref, { amount: 0.4, once:true }) ;
+  const animateH2 = useAnimation() ;
+  const animateP = useAnimation() ;
+  const animateCard = useAnimation() ;
+
+  useEffect(() => {
+    if(isInView){
+      animateH2.start({
+        x: 0,
+        transition: {
+          duration: 0.4
+        }
+      })
+      animateP.start({
+        x: 0,
+        transition: {
+          duration: 0.6
+        }
+      })
+      animateCard.start({
+        opacity: 1,
+        transition: {
+          duration: 0.7
+        }
+      })
+    }
+    if(!isInView){
+      animateH2.start({
+        x: '-100vw'
+      })
+      animateP.start({
+        x: '-100vw'
+      })
+      animateCard.start({
+        opacity: 0
+      })
+    }
+  }, [isInView]) ;
+
   return (
-    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32">
+    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32" ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl">Meet Our Team</h2>
-        <p className="text-lg text-gray-600">
+        <motion.h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.h2>
+        <motion.p className="text-lg text-gray-600" animate={animateP}>
         "Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration."
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        </motion.p>
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8" animate={animateCard}>
           {people.map((person) => (
             <div key={person.name} className="bg-gradient-to-r from-cyan-900 to-cyan-500 p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
@@ -120,7 +162,7 @@ export default function Team() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
