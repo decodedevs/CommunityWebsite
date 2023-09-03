@@ -1,6 +1,21 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { initializeApp } from 'firebase/app';
+import {getAuth, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect} from 'firebase/auth'
+import Spinner from '@/components/Spinner';
+
 const Login = () => {
+
+  const router = useRouter();
+  const [loadSpinner, setLoadSpinner] = useState(false);
+
+  useEffect(()=>{
+    setLoadSpinner(false);
+  },[]);
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -15,13 +30,70 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
+    setLoadSpinner(true);
     e.preventDefault();
     // Perform login form submission or validation here
     console.log('Login form submitted:', formData);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+        setLoadSpinner(false);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   };
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBifEBhJzXlTSLrv6cT6Xo3TOgMh3XR8Vw",
+    authDomain: "cupid-code.firebaseapp.com",
+    projectId: "cupid-code",
+    storageBucket: "cupid-code.appspot.com",
+    messagingSenderId: "172465490651",
+    appId: "1:172465490651:web:f3eb86012f46de8184dafe",
+    measurementId: "G-L4V7J5L10D"
+  };
+
+
+const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  useEffect(()=>{
+    onAuthStateChanged(auth,(user)=>{
+      if (user){
+        router.push("/");
+      }
+      else{
+        console.log(user);
+      }
+    })
+  },[])
+
+  function handleGoogle(){
+    setLoadSpinner(true);
+    console.log("hello")
+    const provider = new GoogleAuthProvider();
+    signInWithRedirect(auth, provider)
+    .then((result)=>{
+      console.log(result.user);
+      setLoadSpinner(false);
+      router.push('/');
+    })
+    .catch((error)=>{
+      console.log(error.code, error.message);
+    })
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center">
+      <dialog open={loadSpinner?'open':false} className='md:bg-transparent bg-black'>
+        <Spinner />
+      </dialog>
       <div className="max-w-md w-full mx-auto p-8 bg-gradient-to-l from-gray-700 via-gray-900 to-black rounded-lg shadow-md">
         <h2 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text pb-2">Log In</h2>
         <form onSubmit={handleSubmit}>
@@ -63,12 +135,15 @@ const Login = () => {
               Log In
             </button>
           </div>
+          <div onClick={handleGoogle}>
+          <button className="w-full mt-3 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300">Log In With Google</button>
+          </div>
         </form>
         <p className="mt-4 text-sm text-gray-100">
           Don't have an account?{' '}
-          <a href="#" className="text-indigo-600 hover:underline">
+          <Link href="/SignUp" className="text-indigo-600 hover:underline">
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

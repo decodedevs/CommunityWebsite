@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
-import logo from '../assets/logo.png';
+'use client'
+
+import React, { useEffect, useState } from 'react';
+import img from '@/Assets/logo.png';
+import Link from 'next/link';
+import { initializeApp } from 'firebase/app';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import Image from 'next/image';
 
-export default function Nav() {
+export default function Nav(props) {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  const [user,setUser] = useState(null);
 
   function routing(str) {
     document.getElementById(str).scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -18,8 +25,62 @@ export default function Nav() {
     setIsProfileMenuOpen(!isProfileMenuOpen);
   }
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyBifEBhJzXlTSLrv6cT6Xo3TOgMh3XR8Vw",
+    authDomain: "cupid-code.firebaseapp.com",
+    projectId: "cupid-code",
+    storageBucket: "cupid-code.appspot.com",
+    messagingSenderId: "172465490651",
+    appId: "1:172465490651:web:f3eb86012f46de8184dafe",
+    measurementId: "G-L4V7J5L10D"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsUserLoggedIn(true);
+        setUser(user);
+        console.log(user.displayName);
+      }
+      else {
+        setIsUserLoggedIn(false);
+        setUser(null);
+      }
+    })
+  },[])
+
+  useEffect(()=>{
+    setIsProfileMenuOpen(props.isProfileMenuOpen);
+  },[props.isProfileMenuOpen])
+
+  function handleSignOut(){
+    signOut(auth).then(()=>{
+      console.log("sign out");
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  }
+
+  function handleSpinner(){
+    props.setLoadSpinner(true);
+  }
+
+  function handleAnyClick(e){
+    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
+      setIsProfileMenuOpen(true);
+    }
+    else{
+      setIsProfileMenuOpen(false);
+    }
+  }
+
+
   return (
-    <nav className="bg-gray-800 sticky top-0 z-50">
+    <nav className="bg-gray-800 sticky top-0 z-50" onClick={(e)=>{handleAnyClick(e)}}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -53,13 +114,13 @@ export default function Nav() {
               </svg>
             </button>
           </div>
-          <div>
+          <div className="flex items-center justify-center flex-shrink-0">
             <Image
-              className="h-20 w-auto sm:h-28"
-              src={logo}
+              className="h-20 w-auto sm:h-28 sm:w-auto sm:align-middle"
+              src={img}
               alt="Your Company"
+         
             />
-      
           </div>
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -99,7 +160,7 @@ export default function Nav() {
                   Newsroom
                 </a>
                 <a
-                  href="https://decodedevs.hashnode.dev/"
+                  href="https://kirtikamal.hashnode.dev/"
                   target="_blank"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
                 >
@@ -141,40 +202,61 @@ export default function Nav() {
                   onClick={toggleProfileMenu}
                 >
                   <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src={Image} alt="" />
+                  <img className="h-8 w-8 rounded-full" src={isUserLoggedIn?user.photoURL:""} alt="" id='profile'/>
                 </button>
               </div>
               <div
-                className={`${
-                  isProfileMenuOpen ? 'block' : 'hidden'
-                } origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                className={`${isProfileMenuOpen ? 'block' : 'hidden'
+                  } origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
                 tabIndex="-1"
+                id='profileMenu'
               >
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
-                >
-                  Your Profile
-                </a>
-                <a
-                  href="/Login"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
-                  
-                >
-                  Login
-                </a>
-                <a
-                  href="/signup"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
-                >
-                  Signup
-                </a>
+                {
+                  isUserLoggedIn ?
+                    <>
+                      <div
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                      >
+                        {user.displayName}
+                      </div>
+                      <div
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                        onClick={handleSignOut}
+                      >
+                        Sign Out
+                      </div>
+                    </>
+                    :
+                    <>
+                      <div
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                      >
+                        Your Profile
+                      </div>
+                      <Link
+                        href="/LogIn"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                        onClick={handleSpinner}
+                      >
+                        Login
+                      </Link>
+                      <Link
+                        href="/SignUp"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                        onClick={handleSpinner}
+                      >
+                        Signup
+                      </Link>
+                    </>
+                }
               </div>
             </div>
           </div>
