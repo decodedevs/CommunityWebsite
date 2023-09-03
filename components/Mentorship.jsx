@@ -82,7 +82,7 @@ export default function Mentorship() {
           <button className="px-4 py-2 font-bold text-white bg-blue-600 rounded hover:bg-blue-700">
             <a href="https://github.com/decodedevs/roadmap" target='_blank'>Learn More</a>  
           </button>
-        </div>
+       
         </motion.div>
       </div>
 

@@ -43,7 +43,7 @@ function App() {
       </dialog>
       <Nav setLoadSpinner={setLoadSpinner} isProfileMenuOpen={isProfileMenuOpen}/>
       <Hero />
-      <Welcome />
+      {/* <Welcome /> */}
       <About />
       <Mentorship />
       <Events />

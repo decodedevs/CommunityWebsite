@@ -19,7 +19,7 @@ const people = [
     name: 'Anshuman Njs',
     imageUrl: 'https://avatars.githubusercontent.com/u/90966147?v=4',
     // role: 'Co-Founder / CEO',
-    about: 'My name is Anshuman , I am 19 years old. I live in Bhubaneswar,Odisha,India. i am a self taught developer. Web development has been my main focus. But, I am pretty good in web designing also. I love the process of using and learning new technologies. I enjoy spending time creating and improving websites',
+    about: 'Anshuman is a versatile professional with expertise in web development, specializing as a React developer and Web 3 developer. An AI enthusiast at heart, he combines his passion for artificial intelligence with his web development skills to create innovative and intelligent web solutions. Anshumans dedication to staying at the forefront of technology ensures he delivers cutting-edge digital experiences that leverage the power of AI and the latest web technologies.',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
@@ -30,7 +30,7 @@ const people = [
     name: 'Aditya Majhi',
     imageUrl: 'https://avatars.githubusercontent.com/u/87221497?v=4',
     // role: 'Co-Founder / CEO',
-    about: ' My name is Aditya , I am 19 years old. I live in Bhubaneswar, Odisha, India. I am a self-taught developer. Web development has been my main focus. But, I am pretty good in web designing also. I love the process of using and learning new technologies. I enjoy spending time creating and improving websites.',
+    about: 'Aditya is a seasoned professional in the world of web development, specializing in Web 3 technologies. With a strong focus on frontend development, Aditya crafts user-centric, responsive, and visually captivating web interfaces. His mastery of Web 3 ensures adityas at the forefront of decentralized applications and blockchain integration, offering a holistic approach to creating modern and immersive digital experiences.',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
@@ -52,7 +52,7 @@ const people = [
     name: 'Kalyan Mohapatra',
     imageUrl: 'https://avatars.githubusercontent.com/u/142584768?v=4',
     // role: 'Co-Founder / CEO',
-    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+    about: 'Kalyan Mohapatra is a creative powerhouse, adept in UI/UX design, graphic design, and web development. Operating as a versatile freelancer, he delivers captivating digital solutions that merge artistic finesse with technical acumen. Kalyans expertise transforms concepts into tangible, user-friendly interfaces, eye-catching visuals  and responsive websites. With a commitment to enhancing digital experiences, he collaborates with clients globally, leaving an indelible mark on the ever-evolving landscape of design and web development.',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
