@@ -114,11 +114,12 @@ export default function Nav(props) {
               </svg>
             </button>
           </div>
-          <div>
+          <div className="flex items-center justify-center flex-shrink-0">
             <Image
-              className="h-20 w-auto sm:h-28"
+              className="h-20 w-auto sm:h-28 sm:w-auto sm:align-middle"
               src={img}
               alt="Your Company"
+         
             />
           </div>
 
