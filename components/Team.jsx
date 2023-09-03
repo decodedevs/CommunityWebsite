@@ -39,37 +39,37 @@ const people = [
   },
   {
     name: 'Barada Laxmi',
-    imageUrl: 'https://avatars.githubusercontent.com/u/98299441?v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/142567052?v=4',
     // role: 'Co-Founder / CEO',
-    about: 'I am a 2nd year student pursuing B.Tech in Computer Science and Engineering from Silicon Institute of Technology, Bhubaneswar. I am a Full Stack Web Developer and a Competitive Programmer. I am a passionate learner and always ready to learn new things. I am a self-motivated person and always ready to work in a team. I am a good listener and a good communicator. I am a hard-working person and always ready to take challenges.',
+    about: 'Barada Laxmi Biswal is a freelance content writer with expertise in SEO optimization, digital marketing, web content creation, WordPress, and technical blogging. She is also passionate about web development and cybersecurity. Laxmi is committed to continuous learning and skill improvement. Beyond work, she is a sketch enthusiast and an avid reader. Feel free to reach out if you ever want to chat about digital marketing strategies, content creation, or just have a friendly conversation about your favorite F.R.I.E.N.D.S episodes!',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
       github: 'https://github.com/KirtiKamal'
     },
   },
-  // {
-  //   name: 'Kalyan Mohapatra',
-  //   imageUrl: 'https://avatars.githubusercontent.com/u/142584768?v=4',
-  //   // role: 'Co-Founder / CEO',
-  //   about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
-  //   social: {
-  //     twitter: 'https://twitter.com/kirtikamal',
-  //     linkedin: 'https://linkedin.com/in/kirtikamal',
-  //     github: 'https://github.com/KirtiKamal'
-  //   },
-  // },
-  // {
-  //   name: 'Soumya Ranjan',
-  //   imageUrl: 'https://avatars.githubusercontent.com/u/123158751?v=4',
-  //   // role: 'Co-Founder / CEO',
-  //   about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
-  //   social: {
-  //     twitter: 'https://twitter.com/kirtikamal',
-  //     linkedin: 'https://linkedin.com/in/kirtikamal',
-  //     github: 'https://github.com/KirtiKamal'
-  //   },
-  // },
+  {
+    name: 'Kalyan Mohapatra',
+    imageUrl: 'https://avatars.githubusercontent.com/u/142584768?v=4',
+    // role: 'Co-Founder / CEO',
+    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+    social: {
+      twitter: 'https://twitter.com/kirtikamal',
+      linkedin: 'https://linkedin.com/in/kirtikamal',
+      github: 'https://github.com/KirtiKamal'
+    },
+  },
+  {
+    name: 'Soumya Ranjan',
+    imageUrl: 'https://avatars.githubusercontent.com/u/123158751?v=4',
+    // role: 'Co-Founder / CEO',
+    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+    social: {
+      twitter: 'https://twitter.com/kirtikamal',
+      linkedin: 'https://linkedin.com/in/kirtikamal',
+      github: 'https://github.com/KirtiKamal'
+    },
+  },
   {
     name: 'Debadatta Pradhan',
     imageUrl: 'https://avatars.githubusercontent.com/u/142510886?v=4',

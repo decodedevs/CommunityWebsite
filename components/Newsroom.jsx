@@ -83,7 +83,7 @@ const Newsroom = () => {
           
           <div 
             key={article.id}
-            className=" bg-gradient-to-r from-slate-300 to-slate-500  p-4 rounded-lg shadow-md"
+            className=" bg-gradient-to-r from-slate-300 to-slate-500  p-4 rounded-lg shadow-md "
             style={{width: "100%", maxWidth: 400}}
           >
      

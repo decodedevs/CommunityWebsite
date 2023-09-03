@@ -49,6 +49,7 @@ const Footer = () => {
         <p>&copy; {new Date().getFullYear()} Decode Devs. All rights reserved.</p>
       </div>
     </footer>
+  
   );
 };
 
