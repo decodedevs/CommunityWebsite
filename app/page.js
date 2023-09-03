@@ -28,10 +28,7 @@ function App() {
 
   function handleAnyClick(e){
     console.log(e.target)
-    if (e.target.id='burger'){
-
-    }
-    else if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
+    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile' || e.target.id=='burger'){
       setIsProfileMenuOpen(!isProfileMenuOpen);
     }
     else{
@@ -47,7 +44,7 @@ function App() {
       </dialog>
       <Nav setLoadSpinner={setLoadSpinner} isProfileMenuOpen={isProfileMenuOpen}/>
       <Hero />
-      <Welcome />
+      {/* <Welcome /> */}
       <About />
       <Mentorship />
       <Events />
