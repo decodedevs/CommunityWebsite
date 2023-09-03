@@ -18,13 +18,13 @@ export default function About() {
       aboutDiv.start({
         x: 0,
         transition: {
-          duration: 0.3
+          duration: 0.5
         }
       })
       imgDiv.start({
         opacity: 1,
         transition: {
-          duration: 0.4
+          duration: 0.5
         }
       })
     } if(!isInView){
