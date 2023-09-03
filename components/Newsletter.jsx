@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
+import { useAnimation, useInView, motion } from "framer-motion";
 
 const Newsletter = () => {
   const [firstName, setFirstName] = useState("");
@@ -67,15 +68,48 @@ const Newsletter = () => {
     setSubscribeAgreement(false);
   };
 
+  //For Animations
+  const ref = useRef(null) ;
+  const isInView = useInView(ref, {amount: 0.3, once: true}) ;
+  const animateH2 = useAnimation() ;
+  const animateForm = useAnimation() ;
+
+  useEffect(() => {
+    if(isInView){
+      animateForm.start({
+        opacity: 1,
+        transition: {
+          duration: 0.4
+        }
+      })
+      animateH2.start({
+        x: 0,
+        transition: {
+          duration: 0.8
+        }
+      })
+    }
+    if(!isInView){
+      animateForm.start({
+        opacity: 0
+      })
+      animateH2.start({
+        x: '-100vw'
+      })
+    }
+  }, [isInView]) ;
+
   return (
-    <section className="bg-gradient-to-r from-black to-indigo-800 py-8">
+    <section className="bg-gradient-to-r from-black to-indigo-800 py-8" ref={ref}>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center">
+        <div className="text-center">
+          <motion.span className="text-4xl font-bold mb-8 text-center" animate={animateH2}>
           Subscribe to Our Newsletter
-        </h2>
+        </motion.span>
+        </div>
 
         <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
-          <div className="flex flex-wrap -mx-3">
+          <motion.div className="flex flex-wrap -mx-3" animate={animateForm}>
             <div className="w-full md:w-1/2 px-3 mb-4">
               <label htmlFor="firstName" className="text-gray-200 font-medium">
                 First Name
@@ -86,6 +120,7 @@ const Newsletter = () => {
                 onChange={(e) => setFirstName(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your First Name"
               />
             </div>
 
@@ -99,6 +134,7 @@ const Newsletter = () => {
                 onChange={(e) => setLastName(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your Last Name"
               />
             </div>
 
@@ -113,6 +149,7 @@ const Newsletter = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your Email"
               />
             </div>
 
@@ -140,7 +177,7 @@ const Newsletter = () => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </motion.div>
         </form>
       </div>
     </section>

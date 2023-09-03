@@ -71,7 +71,10 @@ export default function Nav(props) {
   }
 
   function handleAnyClick(e){
-    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
+    if (e.target.id='burger'){
+
+    }
+    else if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
       setIsProfileMenuOpen(true);
     }
     else{
@@ -83,10 +86,11 @@ export default function Nav(props) {
   return (
     <nav className="bg-gray-800 sticky top-0 z-50" onClick={(e)=>{handleAnyClick(e)}}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div className="relative flex h-16 items-center justify-between space-x-3">
+          <div className="md:absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               type="button"
+              id='burger'
               onClick={toggleMobileMenu}
               className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
@@ -115,7 +119,7 @@ export default function Nav(props) {
               </svg>
             </button>
           </div>
-          <div>
+          <div className=''>
             <Image
               className="h-20 w-auto sm:h-28"
               src={img}
@@ -133,6 +137,14 @@ export default function Nav(props) {
                   className="hover:bg-gray-700 hover:cursor-pointer text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Home
+                </a>
+                <a
+                  onClick={() => {
+                    routing('about');
+                  }}
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
+                >
+                  About
                 </a>
                 <a
                   onClick={() => {
@@ -255,6 +267,14 @@ export default function Nav(props) {
               aria-current="page"
             >
               Home
+            </a>
+            <a
+              onClick={() => {
+                routing('about');
+              }}
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >
+              About
             </a>
             <a
               onClick={() => {

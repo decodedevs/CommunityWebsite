@@ -27,7 +27,11 @@ function App() {
   },[]);
 
   function handleAnyClick(e){
-    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
+    console.log(e.target)
+    if (e.target.id='burger'){
+
+    }
+    else if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
       setIsProfileMenuOpen(!isProfileMenuOpen);
     }
     else{
@@ -37,7 +41,7 @@ function App() {
   }
 
   return (
-    <div className="bg-gray-800 pb-20" onClick={(e)=>{handleAnyClick(e)}}>
+    <div className="bg-gray-800" onClick={(e)=>{handleAnyClick(e)}}>
       <dialog open={loadSpinner?'open':false} className='md:bg-transparent bg-black'>
         <Spinner />
       </dialog>

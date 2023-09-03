@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useAnimation, useInView, motion } from 'framer-motion';
 
 const people = [
   {
@@ -45,7 +46,7 @@ const people = [
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/KirtiKamal'
+      github: 'https://github.com/LaxmiBarada'
     },
   },
   {
@@ -57,6 +58,17 @@ const people = [
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
       github: 'https://github.com/KirtiKamal'
+    },
+  },
+  {
+    name: 'Priyanshu Rout',
+    imageUrl: 'https://avatars.githubusercontent.com/u/143950409?s=400&u=78b90e387298db176fee5467568af3be46bf0593&v=4',
+    // role: 'Co-Founder / CEO',
+    about: 'Kalyan Mohapatra is a creative powerhouse, adept in UI/UX design, graphic design, and web development. Operating as a versatile freelancer, he delivers captivating digital solutions that merge artistic finesse with technical acumen. Kalyans expertise transforms concepts into tangible, user-friendly interfaces, eye-catching visuals  and responsive websites. With a commitment to enhancing digital experiences, he collaborates with clients globally, leaving an indelible mark on the ever-evolving landscape of design and web development.',
+    social: {
+      twitter: 'https://twitter.com/priyanshurout54',
+      linkedin: 'https://www.linkedin.com/in/priyanshu-rout-643452259/',
+      github: 'https://github.com/priyanshurout'
     },
   },
   {
@@ -87,14 +99,57 @@ const people = [
 ];
 
 export default function Team() {
+
+  const ref = useRef(null) ;
+  const isInView = useInView(ref, { amount: 0.4, once:true }) ;
+  const animateH2 = useAnimation() ;
+  const animateP = useAnimation() ;
+  const animateCard = useAnimation() ;
+
+  useEffect(() => {
+    if(isInView){
+      animateH2.start({
+        x: 0,
+        transition: {
+          duration: 0.4
+        }
+      })
+      animateP.start({
+        x: 0,
+        transition: {
+          duration: 0.6
+        }
+      })
+      animateCard.start({
+        opacity: 1,
+        transition: {
+          duration: 0.7
+        }
+      })
+    }
+    if(!isInView){
+      animateH2.start({
+        x: '-100vw'
+      })
+      animateP.start({
+        x: '-100vw'
+      })
+      animateCard.start({
+        opacity: 1
+      })
+    }
+  }, [isInView]) ;
+
   return (
-    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32">
+    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32" ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl">Meet Our Team</h2>
-        <p className="text-lg text-gray-600">
+        <div className='text-center'>
+        <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
+        </div>
+        <motion.p className="text-lg text-gray-600" animate={animateP}>
         "Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration."
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        </motion.p>
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8" animate={animateCard}>
           {people.map((person) => (
             <div key={person.name} className="bg-gradient-to-r from-cyan-900 to-cyan-500 p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
@@ -120,7 +175,7 @@ export default function Team() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

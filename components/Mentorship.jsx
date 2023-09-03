@@ -15,13 +15,13 @@ export default function Mentorship() {
       animateH2.start({
         opacity: 1,
         transition: {
-          duration: 0.3
+          duration: 0.4
         }
       })
       mentorDiv.start({
         x: 0,
         transition: {
-          duration: 0.3
+          duration: 0.5
         }
       })
       imgDiv.start({
@@ -45,9 +45,9 @@ export default function Mentorship() {
   }, [isInView]) ;
 
   return (
-    <div className="flex flex-col md:flex-row bg-gradient-to-r from-black to-indigo-800" ref={ref}>
+    <div className="flex flex-col md:flex-row bg-gradient-to-l from-gray-700 via-gray-900 to-black" ref={ref}>
       <div className="basis-1/2 p-4 md:p-8">
-        <motion.h2 className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text" animate={animateH2}>Mentorship</motion.h2>
+        <motion.span className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">Mentorship</motion.span>
 
         <motion.div className="mt-6 space-y-6" animate={mentorDiv}>
           <div>
@@ -82,7 +82,6 @@ export default function Mentorship() {
           <button className="px-4 py-2 font-bold text-white bg-blue-600 rounded hover:bg-blue-700">
             <a href="https://github.com/decodedevs/roadmap" target='_blank'>Learn More</a>  
           </button>
-       
         </motion.div>
       </div>
 
