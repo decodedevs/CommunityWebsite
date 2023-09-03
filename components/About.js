@@ -38,14 +38,14 @@ export default function About() {
   }, [isInView]) ;
 
   return (
-    <div id='about' className="bg-slate-950" ref={ref}>
+    <div id='about' className="bg-gradient-to-r from-black to-indigo-800" ref={ref}>
 
       <div className="container mx-auto px-4 py-16 lg:flex">
         <motion.div 
           className="lg:w-1/2"
           animate={aboutDiv}
         >
-          <h1 className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">About Us</h1>
+          <span className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">About Us</span>
 
           <p className="mt-4 text-lg text-gray-500">
 
