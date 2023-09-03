@@ -102,10 +102,10 @@ const Newsroom = () => {
   }, [isInView]) ;
 
   return (
-    <div id="newsroom" className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32" ref={ref}>
-      <div className="max-w-screen-lg mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <div className="text-center">
-        <motion.span className="text-3xl p-4 font-bold text-center tracking-tight bg-gradient-to-r from-cyan-300 to-blue-700 text-transparent bg-clip-text sm:text-4xl" animate={animateH2}>Newsroom</motion.span>
+    <div id="newsroom" className="bg-gradient-to-l from-gray-700 via-gray-900 to-black sm:py-5" ref={ref}>
+      <div className="max-w-screen-lg mx-auto px-4 py-5 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+        <motion.span className="text-3xl p-4 font-bold text-center tracking-tight bg-gradient-to-r from-cyan-300 to-blue-500 text-transparent bg-clip-text sm:text-4xl" animate={animateH2}>Newsroom</motion.span>
         </div>
 
         <motion.div className="w-[90%] mx-auto" animate={animateSlider}>

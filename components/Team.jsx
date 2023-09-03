@@ -124,16 +124,16 @@ export default function Team() {
         x: '-100vw'
       })
       animateCard.start({
-        opacity: 0
+        opacity: 1
       })
     }
   }, [isInView]) ;
 
   return (
-    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32" ref={ref}>
+    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black sm:py-5" ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className='text-center'>
-        <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
+        <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
         </div>
         <motion.p className="text-lg text-gray-600" animate={animateP}>
         "Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration."

@@ -103,7 +103,7 @@ const Newsletter = () => {
     <section className="bg-gradient-to-r from-black to-indigo-800 py-8" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <motion.span className="text-4xl font-bold mb-8 text-center" animate={animateH2}>
+          <motion.span className="text-4xl bg-gradient-to-r from-cyan-300 to-blue-500 text-transparent bg-clip-text font-bold mb-8 text-center" animate={animateH2}>
           Subscribe to Our Newsletter
         </motion.span>
         </div>
