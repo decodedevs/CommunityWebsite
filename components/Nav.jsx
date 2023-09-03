@@ -15,8 +15,13 @@ export default function Nav(props) {
   const [user,setUser] = useState(null);
 
   function routing(str) {
-    let element=document.getElementById(str).offsetTop-document.getElementById('navbar').offsetHeight-10;
-    window.scrollTo({top:element, left:0, behavior:"smooth"});
+    if (str=='home'){
+      document.getElementById('home').scrollIntoView({behavior:'smooth', block:'center'})
+    }
+    else{
+      let element=document.getElementById(str).offsetTop-document.getElementById('navbar').offsetHeight-10;
+      window.scrollTo({top:element, left:0, behavior:"smooth"});
+    }
   }
 
   function toggleMobileMenu() {
@@ -72,10 +77,7 @@ export default function Nav(props) {
   }
 
   function handleAnyClick(e){
-    if (e.target.id='burger'){
-
-    }
-    else if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
+    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile'){
       setIsProfileMenuOpen(true);
     }
     else{
