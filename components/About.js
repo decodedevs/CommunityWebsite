@@ -1,8 +1,4 @@
-
-
-
 import React, { useEffect, useRef } from 'react';
-import kk from '@/Assets/kk.png';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 export default function About() {
