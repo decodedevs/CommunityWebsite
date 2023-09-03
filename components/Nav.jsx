@@ -15,7 +15,8 @@ export default function Nav(props) {
   const [user,setUser] = useState(null);
 
   function routing(str) {
-    document.getElementById(str).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    let element=document.getElementById(str).offsetTop-document.getElementById('navbar').offsetHeight-10;
+    window.scrollTo({top:element, left:0, behavior:"smooth"});
   }
 
   function toggleMobileMenu() {
@@ -84,7 +85,7 @@ export default function Nav(props) {
 
 
   return (
-    <nav className="bg-gray-800 sticky top-0 z-50" onClick={(e)=>{handleAnyClick(e)}}>
+    <nav id='navbar' className="bg-gray-800 sticky top-0 z-50" onClick={(e)=>{handleAnyClick(e)}}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between space-x-3">
           <div className="md:absolute inset-y-0 left-0 flex items-center sm:hidden">
