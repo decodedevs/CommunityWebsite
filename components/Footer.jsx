@@ -53,25 +53,25 @@ const Footer = () => {
           <p className="mt-2">Connecting developers, one heart at a time.</p>
         </motion.div>
         <motion.div className="flex justify-center space-x-4" animate={animateIconsAndRights}>
-          <a href="#" className="hover:text-blue-500">
+          {/* <a href="#" className="hover:text-blue-500">
             <FaFacebook className="text-2xl" />
-          </a>
-          <a href="#" className="hover:text-blue-300">
+          </a> */}
+          <a href="https://twitter.com/DecodeDevs" className="hover:text-blue-300">
             <FaTwitter className="text-2xl" />
           </a>
-          <a href="#" className="hover:text-pink-500">
+          <a href="https://www.instagram.com/decodedevs/" className="hover:text-pink-500">
             <FaInstagram className="text-2xl" />
           </a>
-          <a href="#" className="hover:text-blue-800">
+          <a href="https://www.linkedin.com/in/decodedevs/" className="hover:text-blue-800">
             <FaLinkedin className="text-2xl" />
           </a>
           <a href="#" className="hover:text-blue-400">
             <FaTelegram className="text-2xl" />
           </a>
-          <a href="#" className="hover:text-green-500">
+          <a href="https://chat.whatsapp.com/HPLkxZvlPPqEkwoN6LMGmH" className="hover:text-green-500">
             <FaWhatsapp className="text-2xl" />
           </a>
-          <a href="#" className="hover:text-purple-600">
+          <a href="https://discord.gg/XDm67SsE" className="hover:text-purple-600">
             <FaDiscord className="text-2xl" />
           </a>
           <a href="#" className="hover:text-red-600">
