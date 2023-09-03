@@ -8,7 +8,7 @@ const people = [
     name: 'Kirti Kamal',
     imageUrl: 'https://avatars.githubusercontent.com/u/98299441?v=4',
     // role: 'Co-Founder / CEO',
-    about: 'Kirti Kamal is a tech enthusiast and visionary community leader pursuing a Bachelor of Technology in Computer Science and Engineering. As a Beta Microsoft Learn Student Ambassador, Kirti helps fellow students learn new technologies and develop their career skills for the future. Kirti also leads and organizes engaging workshops, events, and hackathons for the tech community.',
+    about: 'Kirti Kamal is a tech enthusiast and visionary community leader pursuing a Bachelor of Technology in Computer Science and Engineering. As a Beta Microsoft Learn Student Ambassador, Kirti helps fellow students learn new technologies and develop their career skills for the future. Kirti also leads and organizes engaging workshops, events, and hackathons for the tech community. Kirti strives to inspire others to explore, innovate, and excel in the ever-evolving realm of technology, by blending leadership skills, collaboration, and creativity.',
     social: {
       twitter: 'https://twitter.com/kirtikamal12',
       linkedin: 'https://linkedin.com/in/kirtikamal',
@@ -64,7 +64,7 @@ const people = [
     name: 'Priyanshu Rout',
     imageUrl: 'https://avatars.githubusercontent.com/u/143950409?s=400&u=78b90e387298db176fee5467568af3be46bf0593&v=4',
     // role: 'Co-Founder / CEO',
-    about: 'Kalyan Mohapatra is a creative powerhouse, adept in UI/UX design, graphic design, and web development. Operating as a versatile freelancer, he delivers captivating digital solutions that merge artistic finesse with technical acumen. Kalyans expertise transforms concepts into tangible, user-friendly interfaces, eye-catching visuals  and responsive websites. With a commitment to enhancing digital experiences, he collaborates with clients globally, leaving an indelible mark on the ever-evolving landscape of design and web development.',
+    about: 'Priyanshu Rout is a dedicated tech enthusiast and visionary community leader who is currently pursuing a Bachelor of Technology in Computer Science and Engineering. He is committed to assisting fellow students in acquiring knowledge about emerging technologies and enhancing their career prospects for the future. Furthermore, Priyanshu takes on the responsibility of spearheading and coordinating impactful workshops, events, and hackathons to foster growth and innovation within the tech community.',
     social: {
       twitter: 'https://twitter.com/priyanshurout54',
       linkedin: 'https://www.linkedin.com/in/priyanshu-rout-643452259/',
@@ -75,7 +75,7 @@ const people = [
     name: 'Soumya Ranjan',
     imageUrl: 'https://avatars.githubusercontent.com/u/123158751?v=4',
     // role: 'Co-Founder / CEO',
-    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+    about: 'I am Soumya, currently pursuing my degree in electronics and telecommunications engineering. With a passion for technology, I have gained proficiency in JAVA programming, mastering relational database management systems, and honing my skills in UI design. I am excited to continue my journey in this dynamic field, eager to explore new horizons and contribute to the ever-evolving world of technology.',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
@@ -86,7 +86,7 @@ const people = [
     name: 'Debadatta Pradhan',
     imageUrl: 'https://avatars.githubusercontent.com/u/142510886?v=4',
     // role: 'Co-Founder / CEO',
-    about: 'I am a 2nd year student pursuing B.Tech in Computer Science and Engineering from Silicon Institute of Technology, Bhubaneswar. I am a Full Stack Web Developer and a Competitive Programmer. I am a passionate learner and always ready to learn new things. I am a self-motivated person and always ready to work in a team. I am a good listener and a good communicator. I am a hard-working person and always ready to take challenges.',
+    about: 'Debadatta Pradhan, a fervent tech enthusiast, embarks on a ceaseless learning odyssey. Proficient in diverse coding languages, he thrives in the dynamic tech universe. His rapid learning aptitude aligns seamlessly with his gift for imparting knowledge. Debadattas passions extend across frontend web and Android development, where he tirelessly explores uncharted territories.',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
@@ -141,10 +141,10 @@ export default function Team() {
   }, [isInView]) ;
 
   return (
-    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32" ref={ref}>
+    <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black sm:py-5" ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className='text-center'>
-        <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
+        <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
         </div>
         <motion.p className="text-lg text-gray-600" animate={animateP}>
         "Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration."

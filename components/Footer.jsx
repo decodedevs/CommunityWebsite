@@ -45,7 +45,7 @@ const Footer = () => {
 
   return (
 
-    <footer id="footer" className="bg-gray-900 text-white py-12 pr-4 pl-4" ref={ref}>
+    <footer id="footer" className="bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white py-12 pr-4 pl-4" ref={ref}>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <motion.div className="text-center md:text-left mb-4 md:mb-0" animate={animateH2}>
           <span className="text-3xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">Decode Devs !</span>
