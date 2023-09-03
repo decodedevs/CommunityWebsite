@@ -44,10 +44,12 @@ const Footer = () => {
   }, [isInView]) ;
 
   return (
+
     <footer id="footer" className="bg-gray-900 text-white py-12 pr-4 pl-4" ref={ref}>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <motion.div className="text-center md:text-left mb-4 md:mb-0" animate={animateH2}>
-          <h2 className="text-3xl font-semibold">Decode Devs !</h2>
+          <span className="text-3xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">Decode Devs !</span>
+
           <p className="mt-2">Connecting developers, one heart at a time.</p>
         </motion.div>
         <motion.div className="flex justify-center space-x-4" animate={animateIconsAndRights}>
@@ -81,6 +83,7 @@ const Footer = () => {
         <p>&copy; {new Date().getFullYear()} Decode Devs. All rights reserved.</p>
       </motion.div>
     </footer>
+  
   );
 };
 

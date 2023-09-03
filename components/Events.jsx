@@ -7,7 +7,7 @@ export default function Events() {
       
       <div className="basis-1/2 p-4 md:p-8">
       
-        <h2 className="text-4xl font-bold lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Events</h2>
+        <span className="text-4xl font-bold lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Events</span>
 
         <div className="mt-6 space-y-6">
         
@@ -21,7 +21,14 @@ export default function Events() {
           <div>
             <h3 className="text-lg font-medium leading-6 text-blue-400">Workshops</h3>
             <p className="mt-2 text-base text-gray-100">
-              Hands-on workshops to gain practical experience and apply concepts covered in webinars. 
+              Hands-on workshops to gain practical experience and apply concepts covered in webinars.
+            </p>
+          </div>
+          
+          <div>  
+            <h3 className="text-lg font-medium leading-6 text-blue-400">Blogging Challenges</h3>
+            <p className="mt-2 text-base text-gray-100">
+              Sharpen your blogging skills through fun writing challenges.
             </p>
           </div>
         

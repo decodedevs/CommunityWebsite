@@ -102,9 +102,11 @@ const Newsletter = () => {
   return (
     <section className="bg-gradient-to-r from-black to-indigo-800 py-8" ref={ref}>
       <div className="container mx-auto px-4">
-        <motion.h2 className="text-4xl font-bold mb-8 text-center" animate={animateH2}>
+        <div className="text-center">
+          <motion.span className="text-4xl font-bold mb-8 text-center" animate={animateH2}>
           Subscribe to Our Newsletter
-        </motion.h2>
+        </motion.span>
+        </div>
 
         <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
           <motion.div className="flex flex-wrap -mx-3" animate={animateForm}>
@@ -118,6 +120,7 @@ const Newsletter = () => {
                 onChange={(e) => setFirstName(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your First Name"
               />
             </div>
 
@@ -131,6 +134,7 @@ const Newsletter = () => {
                 onChange={(e) => setLastName(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your Last Name"
               />
             </div>
 
@@ -145,6 +149,7 @@ const Newsletter = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full border border-gray-300 rounded py-2 px-3"
                 required
+                placeholder="Enter Your Email"
               />
             </div>
 

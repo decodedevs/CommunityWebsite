@@ -1,3 +1,6 @@
+
+
+
 import React, { useEffect, useRef } from 'react';
 import kk from '@/Assets/kk.png';
 import { motion, useAnimation, useInView } from 'framer-motion';
@@ -35,15 +38,14 @@ export default function About() {
   }, [isInView]) ;
 
   return (
-    <div id='about' className="bg-slate-950" ref={ref}>
+    <div id='about' className="bg-gradient-to-r from-black to-indigo-800" ref={ref}>
 
       <div className="container mx-auto px-4 py-16 lg:flex">
-
         <motion.div 
           className="lg:w-1/2"
           animate={aboutDiv}
         >
-          <h1 className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">About Us</h1>
+          <span className="text-4xl font-bold lg:text-5xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">About Us</span>
 
           <p className="mt-4 text-lg text-gray-500">
 
@@ -66,12 +68,12 @@ export default function About() {
         </motion.div>
 
         <motion.div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center" animate={imgDiv}>
-          <img
-            src="https://media.istockphoto.com/id/497614524/photo/start-up-developer-team-did-it-again.jpg?s=612x612&w=0&k=20&c=ft8ZYO2ZnI_MkJmbwGyetgKJkKpmMXgAKWuRJkulqnI="
-            className="w-full max-w-lg rounded-lg shadow-lg"
+          <img 
+            className="rounded-md h-64 w-64 lg:h-96 lg:w-96 object-cover"
+            src="https://i.pinimg.com/564x/a3/c3/88/a3c388bc39b40d4018587fa7cdece07b.jpg" 
+            alt="About image"
           />
         </motion.div>
-
       </div>
 
     </div>

@@ -40,37 +40,37 @@ const people = [
   },
   {
     name: 'Barada Laxmi',
-    imageUrl: 'https://avatars.githubusercontent.com/u/98299441?v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/142567052?v=4',
     // role: 'Co-Founder / CEO',
-    about: 'I am a 2nd year student pursuing B.Tech in Computer Science and Engineering from Silicon Institute of Technology, Bhubaneswar. I am a Full Stack Web Developer and a Competitive Programmer. I am a passionate learner and always ready to learn new things. I am a self-motivated person and always ready to work in a team. I am a good listener and a good communicator. I am a hard-working person and always ready to take challenges.',
+    about: 'Barada Laxmi Biswal is a freelance content writer with expertise in SEO optimization, digital marketing, web content creation, WordPress, and technical blogging. She is also passionate about web development and cybersecurity. Laxmi is committed to continuous learning and skill improvement. Beyond work, she is a sketch enthusiast and an avid reader. Feel free to reach out if you ever want to chat about digital marketing strategies, content creation, or just have a friendly conversation about your favorite F.R.I.E.N.D.S episodes!',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
       linkedin: 'https://linkedin.com/in/kirtikamal',
       github: 'https://github.com/KirtiKamal'
     },
   },
-  // {
-  //   name: 'Kalyan Mohapatra',
-  //   imageUrl: 'https://avatars.githubusercontent.com/u/142584768?v=4',
-  //   // role: 'Co-Founder / CEO',
-  //   about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
-  //   social: {
-  //     twitter: 'https://twitter.com/kirtikamal',
-  //     linkedin: 'https://linkedin.com/in/kirtikamal',
-  //     github: 'https://github.com/KirtiKamal'
-  //   },
-  // },
-  // {
-  //   name: 'Soumya Ranjan',
-  //   imageUrl: 'https://avatars.githubusercontent.com/u/123158751?v=4',
-  //   // role: 'Co-Founder / CEO',
-  //   about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
-  //   social: {
-  //     twitter: 'https://twitter.com/kirtikamal',
-  //     linkedin: 'https://linkedin.com/in/kirtikamal',
-  //     github: 'https://github.com/KirtiKamal'
-  //   },
-  // },
+  {
+    name: 'Kalyan Mohapatra',
+    imageUrl: 'https://avatars.githubusercontent.com/u/142584768?v=4',
+    // role: 'Co-Founder / CEO',
+    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+    social: {
+      twitter: 'https://twitter.com/kirtikamal',
+      linkedin: 'https://linkedin.com/in/kirtikamal',
+      github: 'https://github.com/KirtiKamal'
+    },
+  },
+  {
+    name: 'Soumya Ranjan',
+    imageUrl: 'https://avatars.githubusercontent.com/u/123158751?v=4',
+    // role: 'Co-Founder / CEO',
+    about: 'I am Soumya from Trident academy of Technology. Continuing my graduation in the field of Technology belonging to the branch of electronics and telecommunications engineering. I have some knowledge in JAVA , relational database management system, UI design.',
+    social: {
+      twitter: 'https://twitter.com/kirtikamal',
+      linkedin: 'https://linkedin.com/in/kirtikamal',
+      github: 'https://github.com/KirtiKamal'
+    },
+  },
   {
     name: 'Debadatta Pradhan',
     imageUrl: 'https://avatars.githubusercontent.com/u/142510886?v=4',
@@ -132,7 +132,9 @@ export default function Team() {
   return (
     <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black py-24 sm:py-32" ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <motion.h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.h2>
+        <div className='text-center'>
+        <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-900 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
+        </div>
         <motion.p className="text-lg text-gray-600" animate={animateP}>
         "Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration."
         </motion.p>
