@@ -53,7 +53,7 @@ export default function Mentorship() {
           <div>
             <h3 className="text-lg font-medium leading-6 text-blue-400">Structured learning paths</h3>
             <p className="mt-2 text-base text-gray-300">
-              We provide curated roadmaps and learning paths tailored to your goals and skill level. Whether you're a beginner, intermediate or advanced developer, we have got your back.
+              We provide curated roadmaps and learning paths tailored to your goals and skill level. Whether you are a beginner, intermediate or advanced developer, we have got your back.
             </p>
           </div>
 
