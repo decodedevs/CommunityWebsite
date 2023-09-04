@@ -15,6 +15,7 @@ import Chat from "@/components/ChatbotFile/Chat";
 import { useEffect, useState } from "react";
 import Spinner from "@/components/Spinner";
 import Events from "@/components/Events";
+import Head from "next/head";
 
 
 function App() {
@@ -22,27 +23,32 @@ function App() {
   const [loadSpinner, setLoadSpinner] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     setLoadSpinner(false);
-  },[]);
+  }, []);
 
-  function handleAnyClick(e){
+  function handleAnyClick(e) {
     console.log(e.target)
-    if (e.target.offsetParent.id=='profileMenu' || e.target.id=='profile' || e.target.id=='burger'){
+    if (e.target.offsetParent.id == 'profileMenu' || e.target.id == 'profile' || e.target.id == 'burger') {
       setIsProfileMenuOpen(!isProfileMenuOpen);
     }
-    else{
+    else {
       console.log("false");
       setIsProfileMenuOpen(false);
     }
   }
 
   return (
-    <div className="bg-gray-800" onClick={(e)=>{handleAnyClick(e)}}>
-      <dialog open={loadSpinner?'open':false} className='md:bg-transparent bg-black'>
+    <div className="bg-gray-800" onClick={(e) => { handleAnyClick(e) }}>
+      <Head>
+        <meta name="google-site-verification" content="q1aXTk8cmbpCnCya07xG_X8QQ17kECwDLm_xKfpuMC4" />
+        <meta name="description" content="Decode Devs | Empowering Future Developers"/>
+        <meta name="keywords" content="Skill Development, Learning and Growth, Tech Enthusiast Community, Networking Opportunities"/>
+      </Head>
+      <dialog open={loadSpinner ? 'open' : false} className='md:bg-transparent bg-black'>
         <Spinner />
       </dialog>
-      <Nav setLoadSpinner={setLoadSpinner} isProfileMenuOpen={isProfileMenuOpen}/>
+      <Nav setLoadSpinner={setLoadSpinner} isProfileMenuOpen={isProfileMenuOpen} />
       <Hero />
       {/* <Welcome /> */}
       <About />
