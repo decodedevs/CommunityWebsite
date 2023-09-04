@@ -6,7 +6,7 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged, sendPasswordResetEmail } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 
-export default function page(props) {
+export default function ResetPswd(props) {
 
   const [loadSpinner, setLoadSpinner] = useState(false);
   const router = useRouter();
