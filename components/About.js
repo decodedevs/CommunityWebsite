@@ -59,7 +59,7 @@ export default function About() {
 
             ❇️ At Decode Devs, think of us as problem-solving companions armed with creativity and intellect.   <br />
             <br />
-            Let's collaborate to transform problems into opportunities and demonstrate that challenges cannot impede our progress!
+            Let us collaborate to transform problems into opportunities and demonstrate that challenges cannot impede our progress!
           </p>
         </motion.div>
 

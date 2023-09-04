@@ -73,6 +73,7 @@ const app = initializeApp(firebaseConfig);
         console.log(user);
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   function handleGoogle(){
@@ -151,7 +152,7 @@ const app = initializeApp(firebaseConfig);
           </div>
         </form>
         <p className="mt-4 text-sm text-gray-100">
-          Don't have an account?{' '}
+          Do not have an account?{' '}
           <Link href="/SignUp" className="text-indigo-600 hover:underline">
             Sign Up
           </Link>
