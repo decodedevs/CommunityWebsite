@@ -10,11 +10,7 @@ import Spinner from '@/components/Spinner';
 const Login = () => {
 
   const router = useRouter();
-  const [loadSpinner, setLoadSpinner] = useState(false);
-
-  useEffect(()=>{
-    setLoadSpinner(false);
-  },[]);
+  const [loadSpinner, setLoadSpinner] = useState(true);
 
   const [formData, setFormData] = useState({
     email: '',
@@ -70,6 +66,7 @@ const app = initializeApp(firebaseConfig);
         router.push("/");
       }
       else{
+        setLoadSpinner(false);
         console.log(user);
       }
     })
@@ -132,12 +129,12 @@ const app = initializeApp(firebaseConfig);
             </label>
           </div>
           <div>
-            <div>
+            <div className='font-bold text-white mb-3'>
               <Link href={{
                 pathname: '/ResetPswd',
                 query: auth
               }}>
-              forgot password
+              forgot password ?
               </Link>
             </div>
             <button
@@ -147,10 +144,10 @@ const app = initializeApp(firebaseConfig);
               Log In
             </button>
           </div>
+        </form>
           <div onClick={handleGoogle}>
           <button className="w-full mt-3 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300">Log In With Google</button>
           </div>
-        </form>
         <p className="mt-4 text-sm text-gray-100">
           Do not have an account?{' '}
           <Link href="/SignUp" className="text-indigo-600 hover:underline">
