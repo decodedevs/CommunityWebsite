@@ -10,7 +10,7 @@ import Spinner from '@/components/Spinner';
 const Signup = () => {
 
   const router = useRouter();
-  const [loadSpinner, setLoadSpinner] = useState(false);
+  const [loadSpinner, setLoadSpinner] = useState(true);
 
   useEffect(()=>{
     setLoadSpinner(false);
@@ -70,6 +70,7 @@ const Signup = () => {
       }
       else{
         console.log(user);
+        setLoadSpinner(false);
       }
     })
   },[])
@@ -95,7 +96,7 @@ const Signup = () => {
       <dialog open={loadSpinner?'open':false} className='bg-transparent z-20'>
         <Spinner />
       </dialog>
-    <div className="min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center">
+    <div className={`min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center ${loadSpinner? 'blur':""}`}>
       <div className="max-w-md w-full mx-auto p-8 bg-gradient-to-l from-gray-700 via-gray-900 to-black rounded-lg shadow-md">
         <h2 className="text-4xl font-semibold mb-4  bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text pb-2">Sign Up</h2>
         <form onSubmit={handleSubmit}>
@@ -175,10 +176,10 @@ const Signup = () => {
               Sign Up
             </button>
           </div>
+        </form>
           <div onClick={handleGoogle}>
             <button className="w-full mt-3 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300">Sign In With Google</button>
           </div>
-        </form>
         <p className="mt-4 text-sm text-gray-100">
           Already have an account?{' '}
           <Link href="/LogIn" className="text-indigo-600 hover:underline">
