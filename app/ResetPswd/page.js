@@ -73,7 +73,7 @@ export default function ResetPswd(props) {
         <dialog open={loadSpinner ? 'open' : false} className='bg-transparent z-20'>
           <Spinner />
         </dialog>
-      <div className="min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center">
+      <div className={`min-h-screen bg-gradient-to-r from-black to-indigo-800 flex items-center justify-center ${loadSpinner? 'blur':""}`}>
         <div className="max-w-md w-full mx-auto p-8 bg-gradient-to-l from-gray-700 via-gray-900 to-black rounded-lg shadow-md">
           <h2 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text pb-2">Log In</h2>
           <form onSubmit={handleSubmit}>
