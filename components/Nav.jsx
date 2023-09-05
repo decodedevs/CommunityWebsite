@@ -226,7 +226,7 @@ export default function Nav(props) {
                         {user.displayName}
                       </div>
                       <div
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block hover:cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         role="menuitem"
                         onClick={handleSignOut}
                       >
@@ -237,7 +237,7 @@ export default function Nav(props) {
                     <>
                       <Link
                         href="/LogIn"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block hover:cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         role="menuitem"
                         onClick={handleSpinner}
                       >
@@ -245,7 +245,7 @@ export default function Nav(props) {
                       </Link>
                       <Link
                         href="/SignUp"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block hover:cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         role="menuitem"
                         onClick={handleSpinner}
                       >
