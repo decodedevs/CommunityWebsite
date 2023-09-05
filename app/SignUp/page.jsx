@@ -12,10 +12,6 @@ const Signup = () => {
   const router = useRouter();
   const [loadSpinner, setLoadSpinner] = useState(true);
 
-  useEffect(()=>{
-    setLoadSpinner(false);
-  },[]);
-
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
