@@ -12,8 +12,8 @@ const people = [
     social: {
       twitter: 'https://twitter.com/kirtikamal12',
       linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/KirtiKamal'
-
+      github: 'https://github.com/KirtiKamal',
+      website: 'https://kirtikamalsahoo.vercel.app/'
     },
   },
   {
@@ -22,9 +22,10 @@ const people = [
     // role: 'Co-Founder / CEO',
     about: 'Anshuman is a versatile professional with expertise in web development, specializing as a React developer and Web 3 developer. An AI enthusiast at heart, he combines his passion for artificial intelligence with his web development skills to create innovative and intelligent web solutions. Anshumans dedication to staying at the forefront of technology ensures he delivers cutting-edge digital experiences that leverage the power of AI and the latest web technologies.',
     social: {
-      twitter: 'https://twitter.com/kirtikamal',
-      linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/KirtiKamal'
+      twitter: 'https://twitter.com/AnshumanNjs',
+      linkedin: 'https://www.linkedin.com/in/anshuman-narendrajit-singh-499048204/',
+      github: 'https://github.com/anshumannjs',
+      website: 'https://my-portfolio-ten-lyart.vercel.app/'
     },
   },
   {
@@ -33,9 +34,10 @@ const people = [
     // role: 'Co-Founder / CEO',
     about: 'Aditya is a seasoned professional in the world of web development, specializing in Web 3 technologies. With a strong focus on frontend development, Aditya crafts user-centric, responsive, and visually captivating web interfaces. His mastery of Web 3 ensures adityas at the forefront of decentralized applications and blockchain integration, offering a holistic approach to creating modern and immersive digital experiences.',
     social: {
-      twitter: 'https://twitter.com/kirtikamal',
-      linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/aditya-majhi'
+      twitter: 'https://twitter.com/1Adityamajhi',
+      linkedin: 'https://www.linkedin.com/in/aditya-majhi-936674220/',
+      github: 'https://github.com/aditya-majhi',
+      website: 'https://iamaditya.me/'
     },
   },
   {
@@ -44,8 +46,8 @@ const people = [
     // role: 'Co-Founder / CEO',
     about: 'Barada Laxmi Biswal is a freelance content writer with expertise in SEO optimization, digital marketing, web content creation, WordPress, and technical blogging. She is also passionate about web development and cybersecurity. Laxmi is committed to continuous learning and skill improvement. Beyond work, she is a sketch enthusiast and an avid reader. Feel free to reach out if you ever want to chat about digital marketing strategies, content creation, or just have a friendly conversation about your favorite F.R.I.E.N.D.S episodes!',
     social: {
-      twitter: 'https://twitter.com/kirtikamal',
-      linkedin: 'https://linkedin.com/in/kirtikamal',
+      twitter: 'https://twitter.com/laxmi_barada?t=QMRfK558EUvYxeBeWA-AfA&s=09',
+      linkedin: 'https://www.linkedin.com/in/laxmi-barada-5ba108289',
       github: 'https://github.com/LaxmiBarada'
     },
   },
@@ -56,8 +58,8 @@ const people = [
     about: 'Kalyan Mohapatra is a creative powerhouse, adept in UI/UX design, graphic design, and web development. Operating as a versatile freelancer, he delivers captivating digital solutions that merge artistic finesse with technical acumen. Kalyans expertise transforms concepts into tangible, user-friendly interfaces, eye-catching visuals  and responsive websites. With a commitment to enhancing digital experiences, he collaborates with clients globally, leaving an indelible mark on the ever-evolving landscape of design and web development.',
     social: {
       twitter: 'https://twitter.com/kirtikamal',
-      linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/KirtiKamal'
+      linkedin: 'https://www.linkedin.com/in/kalyan-mohapatra-2394b3274',
+      github: 'https://github.com/KalyanMohapatra'
     },
   },
   {
@@ -77,9 +79,9 @@ const people = [
     // role: 'Co-Founder / CEO',
     about: 'I am Soumya, currently pursuing my degree in electronics and telecommunications engineering. With a passion for technology, I have gained proficiency in JAVA programming, mastering relational database management systems, and honing my skills in UI design. I am excited to continue my journey in this dynamic field, eager to explore new horizons and contribute to the ever-evolving world of technology.',
     social: {
-      twitter: 'https://twitter.com/kirtikamal',
-      linkedin: 'https://linkedin.com/in/kirtikamal',
-      github: 'https://github.com/KirtiKamal'
+      twitter: 'https://twitter.com/7777Soumya7777?t=zFIe4OQsGYIZiDJsgV53gQ&s=09',
+      linkedin: 'https://www.linkedin.com/in/soumya-ranjan-pradhan-87268b201',
+      github: 'https://github.com/soumyaranjanpradhan'
     },
   },
   {
@@ -94,20 +96,20 @@ const people = [
     },
   },
 
-  
+
   // Add more people...
 ];
 
 export default function Team() {
 
-  const ref = useRef(null) ;
-  const isInView = useInView(ref, { amount: 0.2, once:true }) ;
-  const animateH2 = useAnimation() ;
-  const animateP = useAnimation() ;
-  const animateCard = useAnimation() ;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.2, once: true });
+  const animateH2 = useAnimation();
+  const animateP = useAnimation();
+  const animateCard = useAnimation();
 
   useEffect(() => {
-    if(isInView){
+    if (isInView) {
       animateH2.start({
         x: 0,
         transition: {
@@ -127,7 +129,7 @@ export default function Team() {
         }
       })
     }
-    if(!isInView){
+    if (!isInView) {
       animateH2.start({
         x: '-100vw'
       })
@@ -138,16 +140,16 @@ export default function Team() {
         opacity: 0
       })
     }
-  }, [isInView]) ;
+  }, [isInView]);
 
   return (
     <div className="bg-gradient-to-l from-gray-700 via-gray-900 to-black sm:py-5" ref={ref}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className='text-center'>
-        <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
+          <motion.span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text sm:text-6xl" animate={animateH2}>Meet Our Team</motion.span>
         </div>
         <motion.p className="text-lg text-gray-600">
-        Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration.
+          Get acquainted with the individuals behind Decode Devs! Each of us brings a distinct perspective that fuels our collective determination to create an impact. Uncover the minds propelling innovation and collaboration.
         </motion.p>
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {people.map((person) => (
@@ -172,6 +174,15 @@ export default function Team() {
                 <a href={person.social.github} className="text-black hover:text-slate-700">
                   <FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
                 </a>
+                {
+                  person.social.website ?
+                    <a className="text-black hover:text-slate-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6 ml-2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                    </a>
+                    : ""
+                }
               </div>
             </div>
           ))}

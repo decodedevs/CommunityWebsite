@@ -118,7 +118,7 @@ const Newsletter = () => {
                 id="firstName"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
-                className="w-full border border-gray-300 rounded py-2 px-3"
+                className="w-full border border-gray-300 rounded py-2 px-3 text-black"
                 required
                 placeholder="Enter Your First Name"
               />
@@ -132,7 +132,7 @@ const Newsletter = () => {
                 id="lastName"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
-                className="w-full border border-gray-300 rounded py-2 px-3"
+                className="w-full border border-gray-300 rounded py-2 px-3 text-black"
                 required
                 placeholder="Enter Your Last Name"
               />
@@ -147,7 +147,7 @@ const Newsletter = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-gray-300 rounded py-2 px-3"
+                className="w-full border border-gray-300 rounded py-2 px-3 text-black"
                 required
                 placeholder="Enter Your Email"
               />
