@@ -40,10 +40,28 @@ function App() {
 
   return (
     <div className="bg-gray-800" onClick={(e) => { handleAnyClick(e) }}>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317417524366221"
+        crossorigin="anonymous"></script>
+      <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-3508Q8C19G`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
       <Head>
         <meta name="google-site-verification" content="q1aXTk8cmbpCnCya07xG_X8QQ17kECwDLm_xKfpuMC4" />
-        <meta name="description" content="Decode Devs | Empowering Future Developers"/>
-        <meta name="keywords" content="Skill Development, Learning and Growth, Tech Enthusiast Community, Networking Opportunities"/>
+        <meta name="description" content="Decode Devs | Empowering Future Developers" />
+        <meta name="keywords" content="Skill Development, Learning and Growth, Tech Enthusiast Community, Networking Opportunities" />
       </Head>
       <dialog open={loadSpinner ? 'open' : false} className='md:bg-transparent bg-black'>
         <Spinner />
