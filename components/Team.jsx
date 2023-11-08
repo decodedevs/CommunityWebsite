@@ -40,16 +40,6 @@ const people = [
       website: 'https://iamaditya.me/'
     },
   },
-  {
-    name: 'Barada Laxmi',
-    imageUrl: 'https://avatars.githubusercontent.com/u/142567052?v=4',
-    // role: 'Co-Founder / CEO',
-    about: 'Barada Laxmi Biswal is a freelance content writer with expertise in SEO optimization, digital marketing, web content creation, WordPress, and technical blogging. She is also passionate about web development and cybersecurity. Laxmi is committed to continuous learning and skill improvement. Beyond work, she is a sketch enthusiast and an avid reader. Feel free to reach out if you ever want to chat about digital marketing strategies, content creation, or just have a friendly conversation about your favorite F.R.I.E.N.D.S episodes!',
-    social: {
-      twitter: 'https://twitter.com/laxmi_barada?t=QMRfK558EUvYxeBeWA-AfA&s=09',
-      linkedin: 'https://www.linkedin.com/in/laxmi-barada-5ba108289',
-      github: 'https://github.com/LaxmiBarada'
-    },
   },
   {
     name: 'Kalyan Mohapatra',
@@ -62,6 +52,16 @@ const people = [
       github: 'https://github.com/KalyanMohapatra'
     },
   },
+    // {
+    // name: 'Jaiprakash Biswal',
+    // imageUrl: 'https://avatars.githubusercontent.com/u/142567052?v=4',
+    // // role: 'Co-Founder / CEO',
+    // about: 'Barada Laxmi Biswal is a freelance content writer with expertise in SEO optimization, digital marketing, web content creation, WordPress, and technical blogging. She is also passionate about web development and cybersecurity. Laxmi is committed to continuous learning and skill improvement. Beyond work, she is a sketch enthusiast and an avid reader. Feel free to reach out if you ever want to chat about digital marketing strategies, content creation, or just have a friendly conversation about your favorite F.R.I.E.N.D.S episodes!',
+    // social: {
+    //   twitter: '#',
+    //   linkedin: '#',
+    //   github: '#'
+    // },
   {
     name: 'Priyanshu Rout',
     imageUrl: 'https://avatars.githubusercontent.com/u/143950409?s=400&u=78b90e387298db176fee5467568af3be46bf0593&v=4',
