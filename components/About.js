@@ -66,7 +66,7 @@ export default function About() {
         <motion.div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center" animate={imgDiv}>
           <img 
             className="rounded-md h-64 w-64 lg:h-96 lg:w-96 object-cover"
-            src="https://i.pinimg.com/564x/a3/c3/88/a3c388bc39b40d4018587fa7cdece07b.jpg" 
+            src="https://github.com/decodedevs/CommunityWebsite/assets/142470556/50bd1bf5-f20d-44f3-b6b2-be5732025eab" 
             alt="About image"
           />
         </motion.div>
