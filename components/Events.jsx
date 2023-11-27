@@ -82,7 +82,7 @@ export default function Events() {
       </motion.div>
 
       <motion.div className="flex-1 p-4 md:p-8" animate={animateImg}>
-        <img className="object-cover w-full h-full rounded" src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Events" />
+        <img className="object-cover w-full h-full rounded" src="https://github.com/decodedevs/CommunityWebsite/assets/142470556/eb31d2e3-e5f8-40fb-b4ae-202ffbc89e8a" alt="Events" />
       </motion.div>
 
     </div>

@@ -40,6 +40,16 @@ const people = [
       website: 'https://iamaditya.me/'
     },
   },
+  {
+    name: 'Jayprakash Biswal',
+    imageUrl: 'https://media.licdn.com/dms/image/D4D03AQEkkOdhs28nBw/profile-displayphoto-shrink_400_400/0/1674974783894?e=1706745600&v=beta&t=SGh5EaMXrEFgzi_qAkOzzwhxLrhE2F630Hg3gqhHeHI',
+    // role: 'Co-Founder / CEO',
+    about: 'I am Jayaprakash Biswal. I am a tech enthusiastic, self-motivated,reliable,responsible and hard working student.I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I am able to work well under pressure and adhere to strict deadlines. Currently i am pursuing my Bachelor of Technology degree in Computer science and Engineering in Trident Academy of Technology.',
+    social: {
+      twitter: '#',
+      linkedin: 'https://www.linkedin.com/in/jayaprakash-biswal-9918b1257/',
+      github: '#'
+    },
   },
   {
     name: 'Kalyan Mohapatra',
@@ -52,16 +62,6 @@ const people = [
       github: 'https://github.com/KalyanMohapatra'
     },
   },
-    // {
-    // name: 'Jaiprakash Biswal',
-    // imageUrl: 'https://avatars.githubusercontent.com/u/142567052?v=4',
-    // // role: 'Co-Founder / CEO',
-    // about: 'Barada Laxmi Biswal is a freelance content writer with expertise in SEO optimization, digital marketing, web content creation, WordPress, and technical blogging. She is also passionate about web development and cybersecurity. Laxmi is committed to continuous learning and skill improvement. Beyond work, she is a sketch enthusiast and an avid reader. Feel free to reach out if you ever want to chat about digital marketing strategies, content creation, or just have a friendly conversation about your favorite F.R.I.E.N.D.S episodes!',
-    // social: {
-    //   twitter: '#',
-    //   linkedin: '#',
-    //   github: '#'
-    // },
   {
     name: 'Priyanshu Rout',
     imageUrl: 'https://avatars.githubusercontent.com/u/143950409?s=400&u=78b90e387298db176fee5467568af3be46bf0593&v=4',
